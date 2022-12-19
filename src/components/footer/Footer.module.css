@@ -36,7 +36,7 @@
 .icon:hover {
   cursor: pointer;
   transition: all ease-in 0.5s;
-  fill: #bbb;
+  fill: #2a9d8f;
 }
 
 .link:hover {

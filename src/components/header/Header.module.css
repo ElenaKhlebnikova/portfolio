@@ -1,0 +1,16 @@
+.pic {
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 84%, 0 100%);
+  filter: grayscale(50%) blur(3px);
+}
+
+.container_img {
+  width: 100vw;
+  object-fit: cover;
+  height: 100vh;
+  position: absolute;
+  z-index: 2000;
+  background: #264653;
+  clip-path: polygon(0 0, 100% 0%, 100% 84%, 0 100%);
+}
