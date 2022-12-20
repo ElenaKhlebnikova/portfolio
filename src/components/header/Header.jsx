@@ -1,5 +1,5 @@
 import React from "react";
-import mainPic from "../../assets/main_pic.jpg";
+
 import styles from "./Header.module.css";
 
 function Header() {
