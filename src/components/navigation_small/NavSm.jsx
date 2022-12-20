@@ -1,11 +1,10 @@
 import React from "react";
-
-import styles from "./Header.module.css";
+import styles from "./NavSm.module.css";
 import { Link } from "react-router-dom";
-function Header() {
+function NavSm() {
   return (
-    <div className={styles.container_img}>
-      <nav className={styles.navigation}>
+    <div className={styles.container}>
+      <div className={styles.navigation}>
         <Link to="/">
           <p className={styles.nav_item}>About me</p>
         </Link>
@@ -13,12 +12,9 @@ function Header() {
           <p className={styles.nav_item}>Projects</p>
         </Link>
         <p className={styles.nav_item}>Contacts</p>
-      </nav>
-      <div>
-        <h1 className={styles.main_header}>Front-end developer</h1>
       </div>
     </div>
   );
 }
 
-export default Header;
+export default NavSm;
