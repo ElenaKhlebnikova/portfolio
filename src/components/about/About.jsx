@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
-import Button from "./button/Button";
+import Button from "../button/Button";
 import Header from "../header/Header";
 function About() {
   return (

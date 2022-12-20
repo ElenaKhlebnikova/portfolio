@@ -1,0 +1,36 @@
+.button {
+  padding: 1.2rem 2rem;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #2a9d8f;
+  font-family: "Unbounded", sans-serif;
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #23877c;
+  transition: all ease-in 1s;
+}
+
+.button_orange {
+  background: #f4a261;
+  padding: 1.2rem 2rem;
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 10px;
+  font-family: "Unbounded", sans-serif;
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+.button_orange:hover {
+  cursor: pointer;
+  transition: all ease-in 1s;
+
+  background: #e76f51;
+}
