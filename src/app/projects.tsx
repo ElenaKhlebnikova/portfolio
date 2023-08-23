@@ -26,14 +26,14 @@ const Projects = () => {
 
     return (
         <div
-            className="flex flex-col justify-between"
+            className="flex flex-col mt-10 justify-between min-h-screen w-screen"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
             <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
-            <div className="flex relative">
+            <div className="flex relative min-h-screen">
                 {PROJECTS_DATA.map((item, ind) => {
                     return (
                         <div key={item.title} className={getClassName(ind)}>
