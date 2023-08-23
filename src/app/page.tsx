@@ -1,43 +1,29 @@
 'use client'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 import MainSection from './(components)/main-section'
 import Footer from './(components)/footer'
-import Image from 'next/image'
+import Skills from './(components)/skills'
+import { Tektur } from 'next/font/google'
+import AboutMe from './(components)/about-me'
+import Projects from './projects'
+
+const tektur = Tektur({
+    weight: ['400', '500', '600', '700', '800', '900'],
+    style: 'normal',
+    subsets: ['latin'],
+    display: 'swap',
+})
 
 export default function Home() {
     return (
-        <Parallax pages={2}>
-            <ParallaxLayer sticky={{ start: 0.15 }}>
-                <Image
-                    className="ml-20"
-                    src="/rocket.png"
-                    alt="rocket"
-                    width={200}
-                    height={200}
-                />
-            </ParallaxLayer>
-            <ParallaxLayer
-                offset={0}
-                speed={0.5}
-                factor={1.5}
-                style={{
-                    backgroundImage: `url('/stars.png')`,
-                    backgroundSize: 'cover',
-                }}
-            >
+        <div className="overflow-x-hidden text-white " style={tektur.style}>
+            <ParallaxProvider>
                 <MainSection />
-            </ParallaxLayer>
-            <ParallaxLayer
-                style={{
-                    backgroundImage: `url('/stars.png')`,
-                    backgroundSize: 'cover',
-                }}
-                factor={1}
-                offset={1}
-                speed={2}
-            >
-                <Footer />
-            </ParallaxLayer>
-        </Parallax>
+                <AboutMe />
+                <Skills />
+                <Projects />
+                {/* <Footer /> */}
+            </ParallaxProvider>
+        </div>
     )
 }

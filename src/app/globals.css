@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .clip-project {
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+}
 
 :root {
     --foreground-rgb: 0, 0, 0;
@@ -18,7 +24,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background-color: black;
+    background-color: rgb(36, 36, 36);
     /* background-image: url('../../public/repeat-background.jpg');
     background-size: cover; */
 }

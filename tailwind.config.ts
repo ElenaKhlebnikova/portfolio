@@ -7,9 +7,7 @@ const config: Config = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        fontFamily: {
-            display: ['Roboto'],
-        },
+        fontFamily: {},
         extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
