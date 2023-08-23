@@ -30,7 +30,7 @@ const Footer = () => {
     return (
         <div className="flex items-end">
             <div className="m-0 text-white text-xl bg-yellow-500 transition-all duration-1000 flex">
-                {transitions((style, item) => (
+                {/* {transitions((style, item) => (
                     <animated.div style={style}>
                         <Image
                             className="ml-20"
@@ -40,7 +40,7 @@ const Footer = () => {
                             height={200}
                         />
                     </animated.div>
-                ))}
+                ))} */}
 
                 <div className="flex flex-col w-1/2">
                     <p>

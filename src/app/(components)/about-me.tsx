@@ -16,7 +16,7 @@ const AboutMe = () => {
 
     return (
         <div
-            className="flex  justify-around"
+            className="flex overflow-hidden justify-around"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',

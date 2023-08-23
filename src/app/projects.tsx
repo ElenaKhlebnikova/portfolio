@@ -1,50 +1,52 @@
-import Image from 'next/image'
+import { useState } from 'react'
+import ProjectDisplayed from './project-displayed'
+import { PROJECTS_DATA } from './(components)/(constants)/constants'
 
 const Projects = () => {
-    const projectsData = [
-        {
-            title: 'Movie Mash',
-            pic: '/movie-mash.png',
-            description:
-                "A web-application which allows users to view different movies, tv-shows, see their rating, production, cast, crew and popularity. It also allows users to view actors and producers' biography, filmography and their popularity.",
-            repoLink: 'https://github.com/ElenaKhlebnikova/movie-mash',
-            webLink: 'startling-travesseiro-2774de.netlify.app/',
-        },
-    ]
+    const [index, setIndex] = useState<number>(0)
+
+    const styles = {
+        front: 'absolute top-0 left-1/2 z-10 -translate-x-1/2 ',
+        left: 'blur-sm opacity-40 -z-10 absolute ',
+        right: 'absolute opacity-40 blur-sm  -z-10 ',
+        back: 'absolute  opacity-40 blur-sm  -z-10 ',
+    }
+
+    const getClassName = (ind: number) => {
+        if (ind === index) {
+            return styles.front
+        } else if (ind === index + 1) {
+            return styles.right
+        } else if (ind === index - 1) {
+            return styles.left
+        } else {
+            return styles.back
+        }
+    }
 
     return (
         <div
-            className="mb-12 mt-48 flex flex-col ml-32 mr-16 justify-between"
+            className="flex flex-col justify-between"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
-            <h2 className="text-3xl  font-semibold mb-3">Projects</h2>
-            {projectsData.map((p) => {
-                return (
-                    <div
-                        key={p.title}
-                        className="flex justify-between items-start"
-                    >
-                        <div className="flex flex-col w-1/2">
-                            <h3 className="font-semibold text-2xl">
-                                {p.title}
-                            </h3>
-                            <p>{p.description}</p>
+            <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
+            <div className="flex relative">
+                {PROJECTS_DATA.map((item, ind) => {
+                    return (
+                        <div key={item.title} className={getClassName(ind)}>
+                            <ProjectDisplayed
+                                ind={ind}
+                                p={item}
+                                index={index}
+                                setIndex={setIndex}
+                            />
                         </div>
-                        <div
-                            style={{
-                                height: '400px',
-                                width: '600px',
-                                backgroundImage: `linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0)), url(${p.pic}) `,
-                                backgroundSize: 'contain',
-                                backgroundRepeat: 'no-repeat',
-                            }}
-                        ></div>
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </div>
     )
 }

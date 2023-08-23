@@ -72,7 +72,7 @@ const Skills = () => {
         <>
             <div
                 ref={ref}
-                className="flex mt-48 justify-between mb-12"
+                className="flex mt-48 justify-between mb-12 overflow-hidden"
                 style={{
                     backgroundImage: `url('/stars.png')`,
                     backgroundSize: 'cover',

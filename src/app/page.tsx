@@ -16,13 +16,13 @@ const tektur = Tektur({
 
 export default function Home() {
     return (
-        <div className="overflow-hidden text-white " style={tektur.style}>
+        <div className="overflow-x-hidden text-white " style={tektur.style}>
             <ParallaxProvider>
                 <MainSection />
                 <AboutMe />
                 <Skills />
                 <Projects />
-                <Footer />
+                {/* <Footer /> */}
             </ParallaxProvider>
         </div>
     )

@@ -5,14 +5,14 @@ import Image from 'next/image'
 const MainSection = () => {
     return (
         <div
-            className="h-screen text-white  flex items-center justify-around  mb-12"
+            className="h-screen text-white  overflow-hidden flex items-center justify-around  mb-12"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
             <div>
-                <Parallax translateY={['-950px', '1000px']} speed={0.5}>
+                <Parallax translateY={['-3100px', '3000px']} speed={0.5}>
                     <Image
                         className="z-50"
                         src="/cat-1.png"
