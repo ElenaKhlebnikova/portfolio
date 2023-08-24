@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ProjectDisplayed from './project-displayed'
-import { PROJECTS_DATA } from './(components)/(constants)/constants'
+import { PROJECTS_DATA } from '../(constants)/constants'
 
 const Projects = () => {
     const [index, setIndex] = useState<number>(0)
@@ -26,14 +26,16 @@ const Projects = () => {
 
     return (
         <div
-            className="flex flex-col justify-between"
+            className="flex flex-col justify-between h-full"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
-            <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
-            <div className="flex relative">
+            <h2 className="text-3xl ml-32 font-semibold mb-3 min-h-fit">
+                Projects
+            </h2>
+            <div className="flex relative min-h-screen max-h-full">
                 {PROJECTS_DATA.map((item, ind) => {
                     return (
                         <div key={item.title} className={getClassName(ind)}>
