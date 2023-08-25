@@ -1,7 +1,12 @@
-import { FaArrowLeft, FaArrowRight, FaGithub, FaGlobe } from 'react-icons/fa'
+import type { TProject } from '../(types)/types'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
+import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { animated, useSpring } from '@react-spring/web'
-import { useState } from 'react'
-import ProjectMore from './(components)/project-more'
 
 const ProjectDisplayed = ({
     ind,
@@ -10,18 +15,10 @@ const ProjectDisplayed = ({
     index,
 }: {
     ind: number
-    p: {
-        title: string
-        description: string
-        repo: string
-        webLink: string
-        pic: string
-    }
+    p: TProject
     index: number
     setIndex: (value: number) => void
 }) => {
-    const [projectFullShown, setProjectFullShown] = useState(false)
-
     const handleClick = (value: number) => {
         if (index === 0 && value === -1) {
             setIndex(3)
@@ -44,11 +41,12 @@ const ProjectDisplayed = ({
 
     const props = useSpring({
         config: { mass: 5, tension: 500, friction: 80 },
+        duration: 500,
         transform: getTransformValues(),
     })
     if (!p) return null
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col min-h-fit max-h-fit">
             <animated.div style={props} className="mb-10">
                 <div className="flex items-stretch relative justify-center w-screen h-80">
                     <div className="flex items-stretch w-4/5">
@@ -73,12 +71,12 @@ const ProjectDisplayed = ({
                                     {p.title}
                                 </h3>
                                 <p>{p.description}</p>
-                                <button
-                                    onClick={() => setProjectFullShown(true)}
+                                <Link
+                                    href={`project/${p.id}`}
                                     className="text-base text-fuchsia-400 text-right"
                                 >
                                     Show more
-                                </button>
+                                </Link>
 
                                 <div className="mt-10 flex">
                                     <a
@@ -97,15 +95,22 @@ const ProjectDisplayed = ({
                                     </a>
                                 </div>
                             </div>
-                            <div
-                                style={{
-                                    height: '600px',
-                                    width: '700px',
-                                    backgroundImage: `linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0)), url(${p.pic}) `,
-                                    backgroundSize: 'contain',
-                                    backgroundRepeat: 'no-repeat',
-                                }}
-                            ></div>
+                            <div className="relative">
+                                <div
+                                    className="h-full absolute top-0 left-0 w-full z-10"
+                                    style={{
+                                        backgroundImage:
+                                            'linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0))',
+                                    }}
+                                />
+                                <Image
+                                    className="-z-10"
+                                    alt={p.title}
+                                    src={`${p.pic[0]}`}
+                                    width={600}
+                                    height={450}
+                                />
+                            </div>
                         </div>
                         {index === ind && (
                             <button
@@ -119,10 +124,6 @@ const ProjectDisplayed = ({
                     </div>
                 </div>
             </animated.div>
-
-            {projectFullShown && (
-                <ProjectMore setProjectFullShown={setProjectFullShown} />
-            )}
         </div>
     )
 }

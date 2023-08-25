@@ -12,7 +12,7 @@ const MainSection = () => {
             }}
         >
             <div>
-                <Parallax translateY={['-3100px', '3000px']} speed={0.5}>
+                <Parallax translateY={['-4700px', '4600px']} speed={0.5}>
                     <Image
                         className="z-50"
                         src="/cat-1.png"

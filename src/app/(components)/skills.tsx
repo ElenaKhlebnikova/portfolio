@@ -10,7 +10,11 @@ const Skills = () => {
 
     const skills = [
         {
-            className: 'bg-teal-400 h-16 pl-4 flex rounded-tl-md',
+            className: 'bg-emerald-400  h-16 pl-4 flex rounded-tl-md',
+            content: 'ts',
+        },
+        {
+            className: 'bg-teal-400 h-16 pl-4 flex',
             content: 'react',
         },
         {
@@ -37,9 +41,10 @@ const Skills = () => {
             className: 'bg-purple-400  h-16 pl-4 flex items-center',
             content: 'rtl',
         },
+
         {
             className:
-                'bg-fuchsia-400  h-16 pl-4 flex items-center  rounded-bl-md',
+                'bg-fuchsia-400  h-16 pl-4 flex items-center rounded-bl-md',
             content: 'next',
         },
     ]

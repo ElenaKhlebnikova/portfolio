@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import ProjectDisplayed from './project-displayed'
-import { PROJECTS_DATA } from './(components)/(constants)/constants'
+import { PROJECTS_DATA } from '../(constants)/constants'
 
 const Projects = () => {
     const [index, setIndex] = useState<number>(0)
 
     const styles = {
-        front: 'absolute top-0 left-1/2 z-10 -translate-x-1/2 ',
+        front: 'absolute top-0 left-1/2  -translate-x-1/2 ',
         left: 'blur-sm opacity-40 -z-10 absolute ',
         right: 'absolute opacity-40 blur-sm  -z-10 ',
         back: 'absolute  opacity-40 blur-sm  -z-10 ',
