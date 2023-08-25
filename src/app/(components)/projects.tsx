@@ -26,7 +26,7 @@ const Projects = () => {
 
     return (
         <div
-            className="flex flex-col mt-10 justify-between min-h-screen w-screen"
+            className="flex flex-col mt-60 justify-between min-h-screen w-screen"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
