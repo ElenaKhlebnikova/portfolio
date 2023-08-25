@@ -3,17 +3,13 @@
 import { PROJECTS_DATA } from '@/app/(constants)/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-
 import { useState } from 'react'
-
 import { animated, useSpring, useInView } from '@react-spring/web'
-import {
-    FaArrowLeft,
-    FaArrowRight,
-    FaGithub,
-    FaGlobe,
-    FaHome,
-} from 'react-icons/fa'
+import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
+import { FaHome } from '@react-icons/all-files/fa/FaHome'
 
 const ProjectMore = ({
     params,
@@ -42,7 +38,6 @@ const ProjectMore = ({
                     <p className="ml-2">Home</p>
                 </div>
             </Link>
-
             <div
                 ref={ref}
                 className="text-white text-sm px-10 ml-10 mt-5 py-5 gap-x-9 grid grid-cols-2"

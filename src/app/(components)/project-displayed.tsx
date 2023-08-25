@@ -1,9 +1,12 @@
 import type { TProject } from '../(types)/types'
 
-import { FaArrowLeft, FaArrowRight, FaGithub, FaGlobe } from 'react-icons/fa'
-import { animated, useSpring } from '@react-spring/web'
-import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
+import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
+import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { animated, useSpring } from '@react-spring/web'
 
 const ProjectDisplayed = ({
     ind,
@@ -38,6 +41,7 @@ const ProjectDisplayed = ({
 
     const props = useSpring({
         config: { mass: 5, tension: 500, friction: 80 },
+        duration: 500,
         transform: getTransformValues(),
     })
     if (!p) return null
@@ -91,15 +95,27 @@ const ProjectDisplayed = ({
                                     </a>
                                 </div>
                             </div>
-                            <div
-                                style={{
-                                    height: '600px',
-                                    width: '700px',
-                                    backgroundImage: `linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0)), url(${p.pic[0]}) `,
-                                    backgroundSize: 'contain',
-                                    backgroundRepeat: 'no-repeat',
-                                }}
-                            ></div>
+                            <div className="relative">
+                                <div
+                                    className="h-full absolute top-0 left-0 w-full z-10"
+                                    style={{
+                                        backgroundImage:
+                                            'linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0))',
+                                    }}
+
+                                    // style={{
+                                    //     backgroundImage:
+                                    //         'linear-gradient(#e66465, #9198e5)',
+                                    // }}
+                                />
+                                <Image
+                                    className="-z-10"
+                                    alt={p.title}
+                                    src={`${p.pic[0]}`}
+                                    width={600}
+                                    height={450}
+                                />
+                            </div>
                         </div>
                         {index === ind && (
                             <button

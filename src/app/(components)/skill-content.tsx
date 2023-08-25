@@ -1,14 +1,37 @@
 import React from 'react'
-import { FaReact, FaHtml5, FaCss3, FaJs, FaGit, FaNodeJs } from 'react-icons/fa'
-import { SiNextdotjs, SiTestinglibrary } from 'react-icons/si'
+
+import { FaReact } from '@react-icons/all-files/fa/FaReact'
+import { FaHtml5 } from '@react-icons/all-files/fa/FaHtml5'
+import { FaCss3 } from '@react-icons/all-files/fa/FaCss3'
+import { FaJs } from '@react-icons/all-files/fa/FaJs'
+import { FaGit } from '@react-icons/all-files/fa/FaGit'
+import { FaNodeJs } from '@react-icons/all-files/fa/FaNodeJs'
+
+import { SiNextdotjs, SiTestinglibrary, SiTypescript } from 'react-icons/si'
 
 const SkillContent = ({
     content,
 }: {
-    content: 'react' | 'html' | 'css' | 'js' | 'git' | 'node' | 'rtl' | 'next'
+    content:
+        | 'react'
+        | 'html'
+        | 'css'
+        | 'js'
+        | 'git'
+        | 'node'
+        | 'rtl'
+        | 'next'
+        | 'ts'
 }) => {
     return (
         <div className="flex items-center justify-start ml-10">
+            {content === 'ts' && (
+                <>
+                    <SiTypescript className="w-14 h-16 mr-2" />
+                    Typescript
+                </>
+            )}
+
             {content === 'react' && (
                 <>
                     <FaReact className="w-14 h-16 mr-2" /> React

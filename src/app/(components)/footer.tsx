@@ -1,106 +1,83 @@
 'use client'
+
+import { FaHeart } from '@react-icons/all-files/fa/FaHeart'
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
+import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
+
+import { Parallax } from 'react-scroll-parallax'
 import Image from 'next/image'
-import {
-    useInView,
-    animated,
-    useTransition,
-    useSpringRef,
-} from '@react-spring/web'
 
 const Footer = () => {
-    const [ref, inView] = useInView()
-
-    const data = ['/cat-2.png']
-    const api = useSpringRef()
-    console.log(api)
-    const transitions = useTransition(data, {
-        ref: api,
-        config: {
-            duration: 3500,
-            tension: 280,
-            friction: 60,
-        },
-
-        from: { opacity: 0, transform: 'translatey(-700px)' },
-        enter: { opacity: 1, transform: 'translatey(0)' },
-
-        // leave: { opacity: 1, transform: 'translatey(-700px)' },
-    })
-
     return (
-        <div className="flex items-end">
-            <div className="m-0 text-white text-xl bg-yellow-500 transition-all duration-1000 flex">
-                {/* {transitions((style, item) => (
-                    <animated.div style={style}>
+        <div className="mt-10">
+            <div
+                style={{
+                    backgroundImage: `url('/stars.png')`,
+                    backgroundSize: 'cover',
+                }}
+            >
+                <div
+                    style={{
+                        height: '500px',
+                        width: '500px',
+                        backgroundImage: "url('/moon.png')",
+                        backgroundSize: 'contain',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                >
+                    <Parallax translateX={['-300px', '300px']} speed={1}>
                         <Image
-                            className="ml-20"
-                            src={item}
-                            alt="rocket"
-                            width={200}
-                            height={200}
+                            className="mt-20 -z-10"
+                            src="/flag.png"
+                            alt="flag"
+                            width={50}
+                            height={100}
                         />
-                    </animated.div>
-                ))} */}
+                    </Parallax>
+                    <Parallax translateX={['-350px', '1500px']} speed={1}>
+                        <div className="flex flex-col ml-28 items-center  w-full text-xl">
+                            <h3 className="flex justify-between items-center">
+                                Made with a lot of <FaHeart className="mx-1" />{' '}
+                                by Elena Khlebnikova
+                            </h3>
 
-                <div className="flex flex-col w-1/2">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Minima enim doloremque quae veritatis fugit animi
-                        nobis culpa hic similique. Totam veniam corporis, error
-                        voluptates dicta velit harum quasi ullam sint!
-                    </p>{' '}
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Minima enim doloremque quae veritatis fugit animi
-                        nobis culpa hic similique. Totam veniam corporis, error
-                        voluptates dicta velit harum quasi ullam sint!
-                    </p>{' '}
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Minima enim doloremque quae veritatis fugit animi
-                        nobis culpa hic similique. Totam veniam corporis, error
-                        voluptates dicta velit harum quasi ullam sint!
-                    </p>
+                            <div className="flex flex-col items-center mt-5">
+                                <span> You can contact me here: </span>
+                                <a
+                                    href="mailto:khlebnikova.elena.s@gmail.com"
+                                    className="text-gray-300"
+                                >
+                                    khlebnikova.elena.s@gmail.com
+                                </a>{' '}
+                            </div>
+
+                            <div className="flex text-5xl mt-5">
+                                <a
+                                    href="https://github.com/ElenaKhlebnikova"
+                                    className="mr-2"
+                                >
+                                    <FaGithub />{' '}
+                                </a>
+                                <a href="https://github.com/ElenaKhlebnikova">
+                                    <FaLinkedin />{' '}
+                                </a>
+                            </div>
+                            <div className="text-xs mt-24">
+                                <span>Images are provided by:</span>
+                                <a
+                                    target="_blank"
+                                    href=" https://icons8.com/"
+                                    className="ml-2 text-gray-300"
+                                >
+                                    https://icons8.com
+                                </a>
+                            </div>
+                        </div>
+                    </Parallax>
                 </div>
-                <div ref={ref}></div>
             </div>
         </div>
     )
 }
 
 export default Footer
-
-// 'use client'
-// import Image from 'next/image'
-// import { useInView, animated, useTransition } from '@react-spring/web'
-
-// const Footer = () => {
-//     return (
-//         <div className="flex items-end">
-//             <div className="m-0 text-white text-xl bg-yellow-500 transition-all duration-1000 flex">
-//                 <div className="flex flex-col w-1/2">
-//                     <p>
-//                         Lorem, ipsum dolor sit amet consectetur adipisicing
-//                         elit. Minima enim doloremque quae veritatis fugit animi
-//                         nobis culpa hic similique. Totam veniam corporis, error
-//                         voluptates dicta velit harum quasi ullam sint!
-//                     </p>{' '}
-//                     <p>
-//                         Lorem, ipsum dolor sit amet consectetur adipisicing
-//                         elit. Minima enim doloremque quae veritatis fugit animi
-//                         nobis culpa hic similique. Totam veniam corporis, error
-//                         voluptates dicta velit harum quasi ullam sint!
-//                     </p>{' '}
-//                     <p>
-//                         Lorem, ipsum dolor sit amet consectetur adipisicing
-//                         elit. Minima enim doloremque quae veritatis fugit animi
-//                         nobis culpa hic similique. Totam veniam corporis, error
-//                         voluptates dicta velit harum quasi ullam sint!
-//                     </p>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Footer

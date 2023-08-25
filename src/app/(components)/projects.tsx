@@ -6,7 +6,7 @@ const Projects = () => {
     const [index, setIndex] = useState<number>(0)
 
     const styles = {
-        front: 'absolute top-0 left-1/2 z-10 -translate-x-1/2 ',
+        front: 'absolute top-0 left-1/2  -translate-x-1/2 ',
         left: 'blur-sm opacity-40 -z-10 absolute ',
         right: 'absolute opacity-40 blur-sm  -z-10 ',
         back: 'absolute  opacity-40 blur-sm  -z-10 ',
@@ -26,7 +26,7 @@ const Projects = () => {
 
     return (
         <div
-            className="flex flex-col justify-between h-full"
+            className="flex flex-col justify-between h-full mt-60"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',

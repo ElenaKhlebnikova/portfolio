@@ -15,7 +15,7 @@ export default function Home() {
                 <AboutMe />
                 <Skills />
                 <Projects />
-                {/* <Footer /> */}
+                <Footer />
             </ParallaxProvider>
         </div>
     )
