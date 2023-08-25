@@ -102,11 +102,6 @@ const ProjectDisplayed = ({
                                         backgroundImage:
                                             'linear-gradient(0.25turn, rgb(36, 36, 36), rgb(36,36,36, 0))',
                                     }}
-
-                                    // style={{
-                                    //     backgroundImage:
-                                    //         'linear-gradient(#e66465, #9198e5)',
-                                    // }}
                                 />
                                 <Image
                                     className="-z-10"

@@ -9,7 +9,7 @@ import Projects from './(components)/projects'
 
 export default function Home() {
     return (
-        <div className="overflow-hidden ">
+        <div className="overflow-hidden text-white ">
             <ParallaxProvider>
                 <MainSection />
                 <AboutMe />
