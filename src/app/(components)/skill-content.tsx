@@ -24,7 +24,7 @@ const SkillContent = ({
         | 'ts'
 }) => {
     return (
-        <div className="flex items-center justify-start ml-10">
+        <div className="flex items-center justify-start lg:ml-10 ml-3">
             {content === 'ts' && (
                 <>
                     <SiTypescript className="w-14 h-16 mr-2" />

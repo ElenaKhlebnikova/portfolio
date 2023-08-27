@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 import { Tektur } from 'next/font/google'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -22,6 +24,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" style={tektur.style}>
+            <Suspense fallback={<Loading />} />
             <body className="text-white">{children}</body>
         </html>
     )

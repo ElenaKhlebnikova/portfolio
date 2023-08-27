@@ -77,14 +77,14 @@ const Skills = () => {
         <>
             <div
                 ref={ref}
-                className="flex mt-48 justify-between mb-12"
+                className="flex mt-24 lg:mt-48 justify-between mb-12"
                 style={{
                     backgroundImage: `url('/stars.png')`,
                     backgroundSize: 'cover',
                 }}
             >
                 <div className="flex flex-col">
-                    <h2 className="text-3xl font-semibold self-center ml-32">
+                    <h2 className="text-3xl font-semibold self-center ml-10 lg:ml-32">
                         Skills
                     </h2>
                     <Parallax
@@ -101,8 +101,8 @@ const Skills = () => {
                         />
                     </Parallax>
                 </div>
-                <div className="flex justify-end w-2/3">
-                    <div className="text-white text-xl flex flex-col w-3/4">
+                <div className="flex justify-end w-full lg:w-2/3">
+                    <div className="text-white text-base lg:text-xl flex flex-col w-11/12 lg:w-3/4">
                         {trail.map((props, index) => (
                             <animated.div
                                 key={index}

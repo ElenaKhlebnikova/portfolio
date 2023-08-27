@@ -1,10 +1,17 @@
-import { useState } from 'react'
-import ProjectDisplayed from './project-displayed'
+'use client'
+import { useState, useEffect } from 'react'
+
 import { PROJECTS_DATA } from '../(constants)/constants'
+import ProjectDisplayedLg from './project-displayed-lg'
+import ProjectDisplayedSm from './project-displayed-sm'
 
 const Projects = () => {
     const [index, setIndex] = useState<number>(0)
+    const [windowWidth, setWindowWidth] = useState<number>(0)
 
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, [])
     const styles = {
         front: 'absolute top-0 left-1/2  -translate-x-1/2 ',
         left: 'blur-sm opacity-40 -z-10 absolute ',
@@ -33,20 +40,26 @@ const Projects = () => {
             }}
         >
             <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
-            <div className="flex relative min-h-screen">
-                {PROJECTS_DATA.map((item, ind) => {
-                    return (
-                        <div key={item.title} className={getClassName(ind)}>
-                            <ProjectDisplayed
-                                ind={ind}
-                                p={item}
-                                index={index}
-                                setIndex={setIndex}
-                            />
-                        </div>
-                    )
-                })}
-            </div>
+            {windowWidth >= 1024 ? (
+                <div className="flex relative min-h-screen">
+                    {PROJECTS_DATA.map((item, ind) => {
+                        return (
+                            <div key={item.title} className={getClassName(ind)}>
+                                <ProjectDisplayedLg
+                                    ind={ind}
+                                    p={item}
+                                    index={index}
+                                    setIndex={setIndex}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+            ) : (
+                PROJECTS_DATA.map((item) => (
+                    <ProjectDisplayedSm key={item.id} p={item} />
+                ))
+            )}
         </div>
     )
 }

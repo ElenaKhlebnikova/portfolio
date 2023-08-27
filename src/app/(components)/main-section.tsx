@@ -1,20 +1,32 @@
 'use client'
 import { Parallax } from 'react-scroll-parallax'
 import Image from 'next/image'
+import { useState, useEffect } from 'react'
 
 const MainSection = () => {
+    const [windowWidth, setWindowWidth] = useState<number>(0)
+    const [scrollHeight, setScrollHeight] = useState<number>(0)
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+        setScrollHeight(document.body.scrollHeight)
+    }, [])
+
     return (
         <div
-            className="h-screen text-white flex items-center justify-around  mb-12"
+            className="h-screen text-white flex items-center justify-around  mb-12  text-4xl"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
             <div>
-                <Parallax translateY={['-4700px', '4600px']} speed={0.5}>
+                <Parallax
+                    translateY={[`${-scrollHeight}px`, `${scrollHeight}px`]}
+                    speed={0.5}
+                >
                     <Image
-                        className="z-50"
+                        className="-z-50 lg:z-50 "
                         src="/cat-1.png"
                         alt="cat"
                         width={100}
@@ -41,7 +53,7 @@ const MainSection = () => {
                         height={100}
                     />
                 </Parallax>
-                <p className=" text-6xl  font-semibold">
+                <p className="lg:text-6xl  font-semibold">
                     Hi! I am a frontend developer.
                 </p>
             </div>
