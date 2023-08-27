@@ -2,6 +2,7 @@ import type { TProject } from '../(types)/types'
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { PROJECTS_DATA } from '../(constants)/constants'
 import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
 import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
 import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
@@ -19,10 +20,11 @@ const ProjectDisplayedLg = ({
     index: number
     setIndex: (value: number) => void
 }) => {
+    const length = PROJECTS_DATA.length
     const handleClick = (value: number) => {
         if (index === 0 && value === -1) {
-            setIndex(3)
-        } else if (index === 3 && value === 1) {
+            setIndex(length - 1)
+        } else if (index === length - 1 && value === 1) {
             setIndex(0)
         } else {
             setIndex(index + value)
