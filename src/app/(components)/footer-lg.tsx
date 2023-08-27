@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const FooterLg = () => {
     return (
-        <div className="mt-10">
+        <div>
             <div
                 style={{
                     backgroundImage: `url('/stars.png')`,
@@ -34,7 +34,7 @@ const FooterLg = () => {
                             height={100}
                         />
                     </Parallax>
-                    <Parallax translateX={['-350px', '1500px']} speed={1}>
+                    <Parallax translateX={['-350px', '1600px']} speed={1}>
                         <div className="flex flex-col ml-28 items-center  w-full text-xl">
                             <h3 className="flex justify-between items-center">
                                 Made with a lot of <FaHeart className="mx-1" />{' '}
