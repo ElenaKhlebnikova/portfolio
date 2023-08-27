@@ -8,7 +8,7 @@ import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { animated, useSpring } from '@react-spring/web'
 
-const ProjectDisplayed = ({
+const ProjectDisplayedLg = ({
     ind,
     p,
     setIndex,
@@ -62,7 +62,7 @@ const ProjectDisplayed = ({
 
                         <div className="flex justify-between items-start">
                             <div
-                                className="flex flex-col w-1/2  h-full px-5 py-10"
+                                className="flex flex-col w-1/2  h-full px-5 xl:py-10 py-5"
                                 style={{
                                     backgroundColor: 'rgb(36, 36, 36)',
                                 }}
@@ -70,7 +70,9 @@ const ProjectDisplayed = ({
                                 <h3 className="font-semibold text-2xl">
                                     {p.title}
                                 </h3>
-                                <p>{p.description}</p>
+                                <p className="text-sm xl:text-base">
+                                    {p.description}
+                                </p>
                                 <Link
                                     href={`project/${p.id}`}
                                     className="text-base text-fuchsia-400 text-right"
@@ -128,4 +130,4 @@ const ProjectDisplayed = ({
     )
 }
 
-export default ProjectDisplayed
+export default ProjectDisplayedLg

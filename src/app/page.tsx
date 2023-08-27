@@ -1,5 +1,5 @@
 'use client'
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import { ParallaxProvider } from 'react-scroll-parallax'
 import MainSection from './(components)/main-section'
 import Footer from './(components)/footer'
 import Skills from './(components)/skills'
@@ -7,7 +7,7 @@ import Skills from './(components)/skills'
 import AboutMe from './(components)/about-me'
 import Projects from './(components)/projects'
 
-export default function Home() {
+const Home = () => {
     return (
         <div className="overflow-hidden ">
             <ParallaxProvider>
@@ -20,3 +20,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home

@@ -16,13 +16,13 @@ const AboutMe = () => {
 
     return (
         <div
-            className="flex justify-around"
+            className="flex md:flex-row flex-col justify-around"
             style={{
                 backgroundImage: `url('/stars.png')`,
                 backgroundSize: 'cover',
             }}
         >
-            <div className="w-1/2">
+            <div className="md:w-1/2 mx-10 md:mx-0">
                 <h2 className="text-3xl font-semibold">About me</h2>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -51,12 +51,13 @@ const AboutMe = () => {
                 translateX={['0px', '-400px']}
                 translateY={['150px', '-500px']}
                 speed={1}
+                className="ml-32 md:ml-0"
             >
                 <animated.div style={props}>
                     <Image
                         className="mt-24 mb-36 "
                         src="/girl.png"
-                        alt="satellite"
+                        alt="girl"
                         width={200}
                         height={200}
                     />

@@ -3,7 +3,7 @@
 import { PROJECTS_DATA } from '@/app/(constants)/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { animated, useSpring, useInView } from '@react-spring/web'
 import { FaArrowRight } from '@react-icons/all-files/fa/FaArrowRight'
 import { FaArrowLeft } from '@react-icons/all-files/fa/FaArrowLeft'
@@ -19,8 +19,18 @@ const ProjectMore = ({
     }
 }) => {
     const [photoIndex, setPhotoIndex] = useState<number>(0)
-
     const [ref, inView] = useInView()
+
+    const isBrowser = () => typeof window !== 'undefined'
+
+    const scrollToTop = () => {
+        if (!isBrowser()) return
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
+    useEffect(() => {
+        scrollToTop()
+    }, [])
 
     const props = useSpring({
         config: { mass: 5, tension: 500, friction: 80 },
