@@ -22,21 +22,21 @@ const MainSection = () => {
                 <Parallax
                     translateY={[
                         `${-scrollHeight}px`,
-                        `${scrollHeight + 200}px`,
+                        `${scrollHeight + 1000}px`,
                     ]}
                     speed={0.5}
                 >
                     <Image
-                        className="-z-50 lg:z-50"
+                        className="lg:z-50"
                         src="/cat-1.png"
                         alt="cat"
                         width={100}
                         height={100}
                     />
                 </Parallax>
-                <Parallax translateX={['150px', '-300px']} speed={1}>
+                <Parallax translateX={['120px', '-300px']} speed={1}>
                     <Image
-                        className="mt-20 -z-10"
+                        className="mt-44 -z-10"
                         src="/social-planet.png"
                         alt="planet-earth"
                         width={150}
