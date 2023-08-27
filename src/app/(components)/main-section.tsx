@@ -20,11 +20,14 @@ const MainSection = () => {
         >
             <div>
                 <Parallax
-                    translateY={[`${-scrollHeight}px`, `${scrollHeight}px`]}
+                    translateY={[
+                        `${-scrollHeight}px`,
+                        `${scrollHeight + 200}px`,
+                    ]}
                     speed={0.5}
                 >
                     <Image
-                        className="-z-50 lg:z-50 "
+                        className="-z-50 lg:z-50"
                         src="/cat-1.png"
                         alt="cat"
                         width={100}

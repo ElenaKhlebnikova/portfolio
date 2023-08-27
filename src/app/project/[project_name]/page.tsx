@@ -40,60 +40,54 @@ const ProjectMore = ({
     const currentIndex = PROJECTS_DATA.indexOf(p)
 
     return (
-        <animated.div style={props}>
+        <animated.div style={props} className="pb-24">
             <Link href="/">
-                <div className="text-fuchsia-500 mt-10 ml-20 flex justify-start items-center">
+                <div className="text-fuchsia-500 mt-10 ml-5 flex lg:ml-20 justify-start items-center">
                     <FaHome />
                     <p className="ml-2">Home</p>
                 </div>
             </Link>
+            <div className="flex justify-between w-full mb-10 lg:mt-10 mt-5">
+                {currentIndex > 0 && (
+                    <Link href={`${PROJECTS_DATA[currentIndex - 1].id}`}>
+                        <div className="text-fuchsia-500 lg:ml-10 ml-5 flex justify-start items-center">
+                            <FaArrowLeft />
+                            <p className="ml-2">Previous project</p>
+                        </div>
+                    </Link>
+                )}
+
+                {currentIndex < 3 && (
+                    <Link href={`${PROJECTS_DATA[currentIndex + 1].id}`}>
+                        <div className="text-fuchsia-500 lg:mr-10 mr-5  flex justify-start items-center">
+                            <p className="ml-2">Next project</p>
+                            <FaArrowRight />
+                        </div>
+                    </Link>
+                )}
+            </div>
+            <div className="flex justify-start mb-2 lg:mx-10 mx-5">
+                <h2 className="text-3xl font-semibold mr-2">{p?.title}</h2>
+                <a
+                    href={p.repo}
+                    target="_blank"
+                    className="text-4xl text-fuchsia-500 mr-2"
+                >
+                    <FaGithub />
+                </a>
+                <a
+                    href={'https://' + p.webLink}
+                    target="_blank"
+                    className="text-4xl text-fuchsia-500"
+                >
+                    <FaGlobe />
+                </a>
+            </div>
             <div
                 ref={ref}
-                className="text-white text-sm px-10 ml-10 mt-5 py-5 gap-x-9 grid grid-cols-2"
+                className="text-white text-sm  grid px-5 ml-5 lg:px-10 lg:ml-10 mt-5 py-5 lg:gap-x-9 lg:grid-cols-2"
             >
                 <div>
-                    <div className="flex justify-between w-full mb-10">
-                        {currentIndex > 0 && (
-                            <Link
-                                href={`${PROJECTS_DATA[currentIndex - 1].id}`}
-                            >
-                                <div className="text-fuchsia-500  flex justify-start items-center">
-                                    <FaArrowLeft />
-                                    <p className="ml-2">Previous project</p>
-                                </div>
-                            </Link>
-                        )}
-
-                        {currentIndex < 3 && (
-                            <Link
-                                href={`${PROJECTS_DATA[currentIndex + 1].id}`}
-                            >
-                                <div className="text-fuchsia-500  flex justify-start items-center">
-                                    <p className="ml-2">Next project</p>
-                                    <FaArrowRight />
-                                </div>
-                            </Link>
-                        )}
-                    </div>
-                    <div className="flex justify-start mb-2">
-                        <h2 className="text-3xl font-semibold mr-2">
-                            {p?.title}
-                        </h2>
-                        <a
-                            href={p.repo}
-                            target="_blank"
-                            className="text-4xl text-fuchsia-500 mr-2"
-                        >
-                            <FaGithub />
-                        </a>
-                        <a
-                            href={'https://' + p.webLink}
-                            target="_blank"
-                            className="text-4xl text-fuchsia-500"
-                        >
-                            <FaGlobe />
-                        </a>
-                    </div>
                     <div>
                         {p.backend && (
                             <p className="my-5">
@@ -136,7 +130,7 @@ const ProjectMore = ({
                         </div>
                     )}
                 </div>
-                <div>
+                <div className="row-start-1 lg:row-start-auto">
                     <div className="flex flex-col items-center">
                         <div>
                             <img
@@ -145,7 +139,7 @@ const ProjectMore = ({
                                 alt={p.title}
                             />
                         </div>
-                        <div className="flex flex-wrap mt-3">
+                        <div className="flex flex-wrap mt-3 justify-center">
                             {p.pic.map((i: string, index: number) => (
                                 <Image
                                     onClick={() => setPhotoIndex(index)}
