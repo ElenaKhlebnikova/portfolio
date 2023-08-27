@@ -31,7 +31,7 @@ Click  [here]([https://portfolio-3wxougyqh-elenakhlebnikova.vercel.app/]) to vie
 ![Porlfolio skills](https://i.ibb.co/bB9HWJv/image.png)
 ![Projects](https://i.ibb.co/VCD0GW5/image.png)
 ![Project page](https://i.ibb.co/GWD3Zv9/image.png)
-![Footer](https://i.ibb.co/VxRtDxg/image.png)
+![Footer](https://i.ibb.co/X42gN2X/image.png)
 
 
 
