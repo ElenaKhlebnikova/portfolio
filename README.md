@@ -23,7 +23,7 @@ This portfolio with the following tech stack:
 
 ## 👀 Project Overview
 
-Click  [here]([https://startling-travesseiro-2774de.netlify.app/]) to view the project.
+Click  [here]([https://portfolio-3wxougyqh-elenakhlebnikova.vercel.app/]) to view the project.
 
 
 ![Portfolio main](https://i.ibb.co/Yfw3k4Q/image.png)
