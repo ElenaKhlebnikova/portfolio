@@ -22,9 +22,9 @@ const Projects = () => {
     const getClassName = (ind: number) => {
         if (ind === index) {
             return styles.front
-        } else if (ind === index + 1) {
+        } else if (ind >= index) {
             return styles.right
-        } else if (ind === index - 1) {
+        } else if (ind <= index) {
             return styles.left
         } else {
             return styles.back

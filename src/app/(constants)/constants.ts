@@ -293,4 +293,58 @@ export const PROJECTS_DATA = [
             'Building custom hook to share meal fetching logic between the components.',
         ],
     },
+    {
+        title: 'Portfolio',
+        pic: [
+            '/portfolio.png',
+            '/portfolio-1.png',
+            '/portfolio-2.png',
+            '/portfolio-3.png',
+            '/portfolio-4.png',
+        ],
+        id: 'portfolio',
+        description:
+            'This is my portfolio website which showcases projects I have worked on.',
+        repo: 'https://github.com/ElenaKhlebnikova/portfolio',
+        webLink: 'https://portfolio-elenakhlebnikova.vercel.app/',
+
+        techstack: [
+            {
+                technology: 'Next.js',
+                usage: 'Main framework for building the application',
+            },
+            {
+                technology: 'Typescript',
+                usage: 'To typecheck',
+            },
+            {
+                technology: 'Tailwind',
+                usage: 'CSS framework for building UI',
+            },
+
+            {
+                technology: 'React Spring',
+                usage: 'To animate UI elements',
+            },
+            {
+                technology: 'Vercel',
+                usage: 'To deploy the project',
+            },
+        ],
+        features: [
+            'Fully responsive.',
+            'Parallax scroll effect on the main page with multiple elements.',
+            'Animation with React Spring (project slider, project page and trailing animation for skills section).',
+            'Slider to preview projects.',
+            'Each project is represented by a page which shows all information and relevant links.',
+        ],
+        learnt: [
+            'How to implement parallax effect using 2 libraries: React Spring and React Scroll Parallax. (I decided to use React Scroll Parallax since it has more functionality).',
+            'How to implement animation using React Spring.',
+        ],
+        struggled: [
+            'Using React Spring for the first time.',
+            'Adapting parallax effect for different screen sizes.',
+        ],
+    },
 ] as TProject[]
