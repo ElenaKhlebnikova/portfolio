@@ -23,12 +23,11 @@ const ProjectMore = ({
 
     const isBrowser = () => typeof window !== 'undefined'
 
-    const scrollToTop = () => {
-        if (!isBrowser()) return
-        window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
-
     useEffect(() => {
+        const scrollToTop = () => {
+            if (!isBrowser()) return
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
         scrollToTop()
     }, [])
 

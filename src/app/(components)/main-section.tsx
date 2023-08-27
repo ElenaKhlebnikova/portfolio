@@ -4,11 +4,9 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const MainSection = () => {
-    const [windowWidth, setWindowWidth] = useState<number>(0)
     const [scrollHeight, setScrollHeight] = useState<number>(0)
 
     useEffect(() => {
-        setWindowWidth(window.innerWidth)
         setScrollHeight(document.body.scrollHeight)
     }, [])
 

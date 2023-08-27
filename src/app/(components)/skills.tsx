@@ -8,6 +8,19 @@ const Skills = () => {
 
     const [ref, inView] = useInView()
 
+    interface Skill {
+        className: string
+        content:
+            | 'ts'
+            | 'react'
+            | 'html'
+            | 'css'
+            | 'js'
+            | 'git'
+            | 'node'
+            | 'rtl'
+            | 'next'
+    }
     const skills = [
         {
             className: 'bg-emerald-400  h-16 pl-4 flex rounded-tl-md',
@@ -41,13 +54,12 @@ const Skills = () => {
             className: 'bg-purple-400  h-16 pl-4 flex items-center',
             content: 'rtl',
         },
-
         {
             className:
                 'bg-fuchsia-400  h-16 pl-4 flex items-center rounded-bl-md',
             content: 'next',
         },
-    ]
+    ] as Skill[]
 
     const trail = useTrail(skills.length, {
         config,

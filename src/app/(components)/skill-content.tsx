@@ -13,6 +13,7 @@ const SkillContent = ({
     content,
 }: {
     content:
+        | 'ts'
         | 'react'
         | 'html'
         | 'css'
@@ -21,7 +22,6 @@ const SkillContent = ({
         | 'node'
         | 'rtl'
         | 'next'
-        | 'ts'
 }) => {
     return (
         <div className="flex items-center justify-start lg:ml-10 ml-3">
