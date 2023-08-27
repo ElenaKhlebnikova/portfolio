@@ -1,7 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-
-import { Tektur } from 'next/font/google'
 import { Suspense } from 'react'
 import Loading from './loading'
 
