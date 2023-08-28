@@ -91,7 +91,7 @@ const ProjectDisplayedLg = ({
                                         <FaGithub />
                                     </Link>
                                     <Link
-                                        href={'https://' + project.webLink}
+                                        href={project.webLink}
                                         target="_blank"
                                         className="text-4xl"
                                     >
