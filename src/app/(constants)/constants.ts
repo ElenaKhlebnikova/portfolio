@@ -55,6 +55,7 @@ export const PROJECTS_DATA = [
         description:
             "A web-application which allows users to view different movies, tv-shows, see their rating, production, cast, crew and popularity. It also allows users to view actors and producers' biography, filmography and their popularity.",
         repo: 'https://github.com/ElenaKhlebnikova/movie-mash',
+        // include the `https` here
         webLink: 'startling-travesseiro-2774de.netlify.app/',
         features: [
             'Fully responsive',

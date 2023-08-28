@@ -6,6 +6,7 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import Image from 'next/image'
 import Link from 'next/link'
 
+// rename p
 const ProjectDisplayedSm = ({ p }: { p: TProject }) => {
     return (
         <div className="flex flex-col mt-20 min-h-fit max-h-fit">
@@ -32,6 +33,7 @@ const ProjectDisplayedSm = ({ p }: { p: TProject }) => {
                             </Link>
 
                             <div className="mt-10 flex">
+                                {/* use Link instead of a tag everywhere */}
                                 <a
                                     href={p.repo}
                                     target="_blank"

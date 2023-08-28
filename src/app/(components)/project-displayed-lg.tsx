@@ -11,6 +11,7 @@ import { animated, useSpring } from '@react-spring/web'
 
 const ProjectDisplayedLg = ({
     ind,
+    // rename p to project
     p,
     setIndex,
     index,

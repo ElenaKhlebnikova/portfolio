@@ -6,6 +6,7 @@ import ProjectDisplayedLg from './project-displayed-lg'
 import ProjectDisplayedSm from './project-displayed-sm'
 
 const Projects = () => {
+    // currentIndex
     const [index, setIndex] = useState<number>(0)
     const [windowWidth, setWindowWidth] = useState<number>(0)
 
@@ -42,6 +43,8 @@ const Projects = () => {
             <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
             {windowWidth >= 1024 ? (
                 <div className="flex relative min-h-screen">
+                    {/* rename from `ind` to projectIndex */}
+                    {/* rename from `item` to `project` */}
                     {PROJECTS_DATA.map((item, ind) => {
                         return (
                             <div key={item.title} className={getClassName(ind)}>

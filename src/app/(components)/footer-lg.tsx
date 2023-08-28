@@ -1,5 +1,3 @@
-'use client'
-
 import { FaHeart } from '@react-icons/all-files/fa/FaHeart'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'

@@ -21,14 +21,8 @@ const ProjectMore = ({
     const [photoIndex, setPhotoIndex] = useState<number>(0)
     const [ref, inView] = useInView()
 
-    const isBrowser = () => typeof window !== 'undefined'
-
     useEffect(() => {
-        const scrollToTop = () => {
-            if (!isBrowser()) return
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-        scrollToTop()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [])
 
     const props = useSpring({

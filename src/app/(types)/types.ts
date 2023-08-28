@@ -1,3 +1,5 @@
+// rename file to index.ts
+
 export interface TProject {
     title: string
     id: string

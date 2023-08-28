@@ -1,5 +1,3 @@
-'use client'
-
 import { FaHeart } from '@react-icons/all-files/fa/FaHeart'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
@@ -63,6 +61,7 @@ const FooterSm = () => {
                         >
                             <FaGithub />{' '}
                         </a>
+                        {/* use your linkedin account */}
                         <a href="https://github.com/ElenaKhlebnikova">
                             <FaLinkedin />{' '}
                         </a>
