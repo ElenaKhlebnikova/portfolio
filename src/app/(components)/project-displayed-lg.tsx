@@ -1,4 +1,4 @@
-import type { TProject } from '../(types)/types'
+import type { TProject } from '../(types)'
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -10,33 +10,33 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { animated, useSpring } from '@react-spring/web'
 
 const ProjectDisplayedLg = ({
-    ind,
-    p,
-    setIndex,
-    index,
+    projectIndex,
+    project,
+    setCurrentIndex,
+    currentIndex,
 }: {
-    ind: number
-    p: TProject
-    index: number
-    setIndex: (value: number) => void
+    projectIndex: number
+    project: TProject
+    currentIndex: number
+    setCurrentIndex: (value: number) => void
 }) => {
     const length = PROJECTS_DATA.length
     const handleClick = (value: number) => {
-        if (index === 0 && value === -1) {
-            setIndex(length - 1)
-        } else if (index === length - 1 && value === 1) {
-            setIndex(0)
+        if (currentIndex === 0 && value === -1) {
+            setCurrentIndex(length - 1)
+        } else if (currentIndex === length - 1 && value === 1) {
+            setCurrentIndex(0)
         } else {
-            setIndex(index + value)
+            setCurrentIndex(currentIndex + value)
         }
     }
 
     const getTransformValues = () => {
-        if (ind === index) {
+        if (projectIndex === currentIndex) {
             return 'translateX(10px)'
-        } else if (ind > index) {
+        } else if (projectIndex > currentIndex) {
             return 'translateX(200px)'
-        } else if (ind < index) {
+        } else if (projectIndex < currentIndex) {
             return 'translateX(-200px)'
         }
     }
@@ -46,13 +46,13 @@ const ProjectDisplayedLg = ({
         duration: 500,
         transform: getTransformValues(),
     })
-    if (!p) return null
+    if (!project) return null
     return (
         <div className="flex flex-col min-h-fit max-h-fit">
             <animated.div style={props} className="mb-10">
                 <div className="flex items-stretch relative justify-center w-screen h-80">
                     <div className="flex items-stretch w-4/5">
-                        {index === ind && (
+                        {currentIndex === projectIndex && (
                             <button
                                 type="button"
                                 onClick={() => handleClick(-1)}
@@ -70,33 +70,33 @@ const ProjectDisplayedLg = ({
                                 }}
                             >
                                 <h3 className="font-semibold text-2xl">
-                                    {p.title}
+                                    {project.title}
                                 </h3>
                                 <p className="text-sm xl:text-base">
-                                    {p.description}
+                                    {project.description}
                                 </p>
                                 <Link
-                                    href={`project/${p.id}`}
+                                    href={`project/${project.id}`}
                                     className="text-base text-fuchsia-400 text-right"
                                 >
                                     Show more
                                 </Link>
 
                                 <div className="mt-10 flex">
-                                    <a
-                                        href={p.repo}
+                                    <Link
+                                        href={project.repo}
                                         target="_blank"
                                         className="text-4xl mr-3"
                                     >
                                         <FaGithub />
-                                    </a>
-                                    <a
-                                        href={'https://' + p.webLink}
+                                    </Link>
+                                    <Link
+                                        href={'https://' + project.webLink}
                                         target="_blank"
                                         className="text-4xl"
                                     >
                                         <FaGlobe />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="relative">
@@ -109,14 +109,14 @@ const ProjectDisplayedLg = ({
                                 />
                                 <Image
                                     className="-z-10"
-                                    alt={p.title}
-                                    src={`${p.pic[0]}`}
+                                    alt={project.title}
+                                    src={`${project.pic[0]}`}
                                     width={600}
                                     height={450}
                                 />
                             </div>
                         </div>
-                        {index === ind && (
+                        {currentIndex === projectIndex && (
                             <button
                                 type="button"
                                 onClick={() => handleClick(1)}

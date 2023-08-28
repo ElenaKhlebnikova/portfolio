@@ -21,14 +21,8 @@ const ProjectMore = ({
     const [photoIndex, setPhotoIndex] = useState<number>(0)
     const [ref, inView] = useInView()
 
-    const isBrowser = () => typeof window !== 'undefined'
-
     useEffect(() => {
-        const scrollToTop = () => {
-            if (!isBrowser()) return
-            window.scrollTo({ top: 0, behavior: 'smooth' })
-        }
-        scrollToTop()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
     }, [])
 
     const props = useSpring({
@@ -36,8 +30,10 @@ const ProjectMore = ({
         transform: inView ? 'scale(1)' : 'scale(0)',
     })
 
-    const p = PROJECTS_DATA.find((proj) => proj.id === params.project_name)!
-    const currentIndex = PROJECTS_DATA.indexOf(p)
+    const project = PROJECTS_DATA.find(
+        (proj) => proj.id === params.project_name
+    )!
+    const currentIndex = PROJECTS_DATA.indexOf(project)
 
     return (
         <animated.div style={props} className="pb-24">
@@ -47,9 +43,12 @@ const ProjectMore = ({
                     <p className="ml-2">Home</p>
                 </div>
             </Link>
-            <div className="flex justify-between w-full mb-10 lg:mt-10 mt-5">
+            <div className="grid grid-cols-2 w-full mb-10 lg:mt-10 mt-5">
                 {currentIndex > 0 && (
-                    <Link href={`${PROJECTS_DATA[currentIndex - 1].id}`}>
+                    <Link
+                        className="col-start-1 justify-self-start"
+                        href={`${PROJECTS_DATA[currentIndex - 1].id}`}
+                    >
                         <div className="text-fuchsia-500 lg:ml-10 ml-5 flex justify-start items-center">
                             <FaArrowLeft />
                             <p className="ml-2">Previous project</p>
@@ -57,8 +56,11 @@ const ProjectMore = ({
                     </Link>
                 )}
 
-                {currentIndex < 3 && (
-                    <Link href={`${PROJECTS_DATA[currentIndex + 1].id}`}>
+                {currentIndex < PROJECTS_DATA.length - 1 && (
+                    <Link
+                        className="col-start-2 justify-self-end"
+                        href={`${PROJECTS_DATA[currentIndex + 1].id}`}
+                    >
                         <div className="text-fuchsia-500 lg:mr-10 mr-5  flex justify-start items-center">
                             <p className="ml-2">Next project</p>
                             <FaArrowRight />
@@ -67,21 +69,23 @@ const ProjectMore = ({
                 )}
             </div>
             <div className="flex justify-start mb-2 lg:mx-10 mx-5">
-                <h2 className="text-3xl font-semibold mr-2">{p?.title}</h2>
-                <a
-                    href={p.repo}
+                <h2 className="text-3xl font-semibold mr-2">
+                    {project?.title}
+                </h2>
+                <Link
+                    href={project.repo}
                     target="_blank"
                     className="text-4xl text-fuchsia-500 mr-2"
                 >
                     <FaGithub />
-                </a>
-                <a
-                    href={'https://' + p.webLink}
+                </Link>
+                <Link
+                    href={project.webLink}
                     target="_blank"
                     className="text-4xl text-fuchsia-500"
                 >
                     <FaGlobe />
-                </a>
+                </Link>
             </div>
             <div
                 ref={ref}
@@ -89,22 +93,22 @@ const ProjectMore = ({
             >
                 <div>
                     <div>
-                        {p.backend && (
+                        {project.backend && (
                             <p className="my-5">
                                 This project is connected to backend that is
                                 written by me:{' '}
-                                <a
-                                    href={p.backend}
+                                <Link
+                                    href={project.backend}
                                     className="text-fuchsia-300"
                                     target="_blank"
                                 >
-                                    {p.backend}
-                                </a>
+                                    {project.backend}
+                                </Link>
                             </p>
                         )}
                         <h3 className="text-2xl">🤖 Features</h3>
                         <ol className="mt-2 leading-loose list-decimal">
-                            {p?.features.map((i) => (
+                            {project?.features.map((i) => (
                                 <li key={i}>{i}</li>
                             ))}
                         </ol>
@@ -112,18 +116,18 @@ const ProjectMore = ({
                     <div className="mt-10">
                         <h3 className="text-2xl">📖 What I have learnt</h3>
                         <ol className="mt-2 leading-loose list-decimal">
-                            {p?.learnt.map((i) => (
+                            {project?.learnt.map((i) => (
                                 <li key={i}>{i}</li>
                             ))}
                         </ol>
                     </div>
-                    {p.struggled && (
+                    {project.struggled && (
                         <div className="mt-10">
                             <h3 className="text-2xl">
                                 🥹 What I struggled with
                             </h3>
                             <ol className="leading-loose list-decimal">
-                                {p.struggled?.map((i) => (
+                                {project.struggled?.map((i) => (
                                     <li key={i}>{i}</li>
                                 ))}
                             </ol>
@@ -135,12 +139,12 @@ const ProjectMore = ({
                         <div>
                             <img
                                 className="rounded-md border border-fuchsia-500"
-                                src={p.pic[photoIndex]}
-                                alt={p.title}
+                                src={project.pic[photoIndex]}
+                                alt={project.title}
                             />
                         </div>
                         <div className="flex flex-wrap mt-3 justify-center">
-                            {p.pic.map((i: string, index: number) => (
+                            {project.pic.map((i: string, index: number) => (
                                 <Image
                                     onClick={() => setPhotoIndex(index)}
                                     src={i}
@@ -170,7 +174,7 @@ const ProjectMore = ({
                         </thead>
 
                         <tbody>
-                            {p.techstack.map((i) => (
+                            {project.techstack.map((i) => (
                                 <tr key={i.technology}>
                                     <td className="border px-2 py-2 border-zinc-200">
                                         {i.technology}

@@ -6,7 +6,7 @@ import ProjectDisplayedLg from './project-displayed-lg'
 import ProjectDisplayedSm from './project-displayed-sm'
 
 const Projects = () => {
-    const [index, setIndex] = useState<number>(0)
+    const [currentIndex, setCurrentIndex] = useState<number>(0)
     const [windowWidth, setWindowWidth] = useState<number>(0)
 
     useEffect(() => {
@@ -20,11 +20,11 @@ const Projects = () => {
     }
 
     const getClassName = (ind: number) => {
-        if (ind === index) {
+        if (ind === currentIndex) {
             return styles.front
-        } else if (ind >= index) {
+        } else if (ind >= currentIndex) {
             return styles.right
-        } else if (ind <= index) {
+        } else if (ind <= currentIndex) {
             return styles.left
         } else {
             return styles.back
@@ -42,14 +42,17 @@ const Projects = () => {
             <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
             {windowWidth >= 1024 ? (
                 <div className="flex relative min-h-screen">
-                    {PROJECTS_DATA.map((item, ind) => {
+                    {PROJECTS_DATA.map((item, projectIndex) => {
                         return (
-                            <div key={item.title} className={getClassName(ind)}>
+                            <div
+                                key={item.title}
+                                className={getClassName(projectIndex)}
+                            >
                                 <ProjectDisplayedLg
-                                    ind={ind}
-                                    p={item}
-                                    index={index}
-                                    setIndex={setIndex}
+                                    projectIndex={projectIndex}
+                                    project={item}
+                                    currentIndex={currentIndex}
+                                    setCurrentIndex={setCurrentIndex}
                                 />
                             </div>
                         )
@@ -57,7 +60,7 @@ const Projects = () => {
                 </div>
             ) : (
                 PROJECTS_DATA.map((item) => (
-                    <ProjectDisplayedSm key={item.id} p={item} />
+                    <ProjectDisplayedSm key={item.id} project={item} />
                 ))
             )}
         </div>

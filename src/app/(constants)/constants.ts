@@ -1,4 +1,4 @@
-import { TProject } from '../(types)/types'
+import { TProject } from '../(types)'
 
 export const PROJECTS_DATA = [
     {
@@ -55,7 +55,7 @@ export const PROJECTS_DATA = [
         description:
             "A web-application which allows users to view different movies, tv-shows, see their rating, production, cast, crew and popularity. It also allows users to view actors and producers' biography, filmography and their popularity.",
         repo: 'https://github.com/ElenaKhlebnikova/movie-mash',
-        webLink: 'startling-travesseiro-2774de.netlify.app/',
+        webLink: 'https://startling-travesseiro-2774de.netlify.app/',
         features: [
             'Fully responsive',
             'Filtering: users can filter TV shows and movies based on genres, rating and country',
@@ -131,7 +131,7 @@ export const PROJECTS_DATA = [
         description:
             "This form is a part of an application I've collaborated on which allows users to rent out their kitchens. This form allows users to iclude a wide variety of information to their kitchen's listing such as: description, location, photos, host's languages, rules and availability (recurring and non-recurring).",
         repo: 'https://github.com/ElenaKhlebnikova/kitchen-form',
-        webLink: 'kitchen-form.vercel.app',
+        webLink: 'https://kitchen-form.vercel.app',
         features: [
             'Fully responsive',
             'Better UX with autocomplete when using location field',
@@ -210,7 +210,7 @@ export const PROJECTS_DATA = [
         description:
             'This is a web-application which allows users to view UmVet vet clinic website, on which users can view doctors, make an appointment with them and leave feedback.',
         repo: 'https://github.com/ElenaKhlebnikova/um-vet-frontend',
-        webLink: 'frolicking-begonia-777545.netlify.app/',
+        webLink: 'https://frolicking-begonia-777545.netlify.app/',
         features: [
             'Fully responsive.',
             'Booking functionality: users can choose a doctor, date and time of their appointment, then the appointment is stored on the backend.',
@@ -247,7 +247,7 @@ export const PROJECTS_DATA = [
         description:
             'This is a web-application which allows users to view UmVet vet clinic website, on which users can view doctors, make an appointment with them and leave feedback.',
         repo: 'https://github.com/ElenaKhlebnikova/meow-food-frontend',
-        webLink: 'dashing-cupcake-30c83a.netlify.app',
+        webLink: 'https://dashing-cupcake-30c83a.netlify.app',
         backend: 'https://github.com/ElenaKhlebnikova/meow-food-backend',
         techstack: [
             {

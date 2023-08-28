@@ -3,24 +3,25 @@ import SkillContent from './skill-content'
 import Image from 'next/image'
 import { Parallax } from 'react-scroll-parallax'
 
+interface Skill {
+    className: string
+    content:
+        | 'ts'
+        | 'react'
+        | 'html'
+        | 'css'
+        | 'js'
+        | 'git'
+        | 'node'
+        | 'rtl'
+        | 'next'
+}
+
 const Skills = () => {
     const config = { mass: 5, tension: 2000, friction: 200 }
 
     const [ref, inView] = useInView()
 
-    interface Skill {
-        className: string
-        content:
-            | 'ts'
-            | 'react'
-            | 'html'
-            | 'css'
-            | 'js'
-            | 'git'
-            | 'node'
-            | 'rtl'
-            | 'next'
-    }
     const skills = [
         {
             className: 'bg-emerald-400  h-16 pl-4 flex rounded-tl-md',

@@ -1,4 +1,4 @@
-import type { TProject } from '../(types)/types'
+import type { TProject } from '../(types)'
 
 import { FaGlobe } from '@react-icons/all-files/fa/FaGlobe'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
@@ -6,7 +6,7 @@ import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const ProjectDisplayedSm = ({ p }: { p: TProject }) => {
+const ProjectDisplayedSm = ({ project }: { project: TProject }) => {
     return (
         <div className="flex flex-col mt-20 min-h-fit max-h-fit">
             <div className="flex items-stretch relative justify-center w-screen">
@@ -19,33 +19,33 @@ const ProjectDisplayedSm = ({ p }: { p: TProject }) => {
                             }}
                         >
                             <h3 className="font-semibold text-2xl">
-                                {p.title}
+                                {project.title}
                             </h3>
                             <p className="text-sm xl:text-base">
-                                {p.description}
+                                {project.description}
                             </p>
                             <Link
-                                href={`project/${p.id}`}
+                                href={`project/${project.id}`}
                                 className="text-base text-fuchsia-400 text-right"
                             >
                                 Show more
                             </Link>
 
                             <div className="mt-10 flex">
-                                <a
-                                    href={p.repo}
+                                <Link
+                                    href={project.repo}
                                     target="_blank"
                                     className="text-4xl mr-3"
                                 >
                                     <FaGithub />
-                                </a>
-                                <a
-                                    href={'https://' + p.webLink}
+                                </Link>
+                                <Link
+                                    href={project.webLink}
                                     target="_blank"
                                     className="text-4xl"
                                 >
                                     <FaGlobe />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="relative">
@@ -58,8 +58,8 @@ const ProjectDisplayedSm = ({ p }: { p: TProject }) => {
                             />
                             <Image
                                 className="-z-10"
-                                alt={p.title}
-                                src={`${p.pic[0]}`}
+                                alt={project.title}
+                                src={`${project.pic[0]}`}
                                 width={600}
                                 height={450}
                             />

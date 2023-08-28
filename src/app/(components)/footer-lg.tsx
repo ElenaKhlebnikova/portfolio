@@ -1,11 +1,10 @@
-'use client'
-
 import { FaHeart } from '@react-icons/all-files/fa/FaHeart'
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub'
 import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 
 import { Parallax } from 'react-scroll-parallax'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const FooterLg = () => {
     return (
@@ -43,34 +42,38 @@ const FooterLg = () => {
 
                             <div className="flex flex-col items-center mt-5">
                                 <span> You can contact me here: </span>
-                                <a
+                                <Link
                                     href="mailto:khlebnikova.elena.s@gmail.com"
                                     className="text-gray-300"
                                 >
                                     khlebnikova.elena.s@gmail.com
-                                </a>{' '}
+                                </Link>
                             </div>
 
                             <div className="flex text-5xl mt-5">
-                                <a
+                                <Link
+                                    target="_blank"
                                     href="https://github.com/ElenaKhlebnikova"
                                     className="mr-2"
                                 >
                                     <FaGithub />{' '}
-                                </a>
-                                <a href="https://github.com/ElenaKhlebnikova">
+                                </Link>
+                                <Link
+                                    target="_blank"
+                                    href="https://www.linkedin.com/in/elena-khlebnikova-38160b28a"
+                                >
                                     <FaLinkedin />{' '}
-                                </a>
+                                </Link>
                             </div>
                             <div className="text-xs mt-24">
                                 <span>Images are provided by:</span>
-                                <a
+                                <Link
                                     target="_blank"
                                     href=" https://icons8.com/"
                                     className="ml-2 text-gray-300"
                                 >
                                     https://icons8.com
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </Parallax>
