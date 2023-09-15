@@ -63,7 +63,7 @@ const Skills = () => {
         {
             className:
                 'bg-fuchsia-400  h-16 pl-4 flex items-center rounded-bl-md',
-            content: 'netlify',
+            content: 'vercel',
         },
     ] as Skill[]
 

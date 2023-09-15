@@ -22,20 +22,20 @@ const AboutMe = () => {
                 backgroundSize: 'cover',
             }}
         >
-            <div className="md:w-1/2 mx-10  mb-3 md:mx-0">
-                <h2 className="text-3xl font-semibold">About me</h2>
+            <div className="md:w-1/2 md:mx-10 mx-2 flex flex-col md:text-xl leading-7 font-mono px-5 py-5 bg-black rounded-md bg-opacity-50 mb-3">
+                <h2 className="md:text-3xl text-2xl font-semibold">About me</h2>
                 <p className="mb-2">
                     Hi! My name is Elena and I am a frontend developer based in
                     Berlin.
                 </p>
                 <p className="mb-2">
-                    Before descovering frontend I got a bachelor&apos;s degree
+                    Before discovering frontend I got a bachelor&apos;s degree
                     in Teaching and Languages (German and English) and had been
                     working as a teacher and a private tutor for around 6 years.
-                    This experience helped me to get a rage of valuable skills:
-                    working in a team, solving conflicts, working undes stress
-                    and, most importantly, I&apos;ve learnt how to teach and
-                    learn, and it is somethins that I apply everyday on my
+                    This experience helped me to get a range of valuable skills:
+                    working in a team, solving conflicts, working under stress
+                    and, most importantly, I&apos;ve learnt how to teach and how
+                    to learn, and it is something that I apply everyday on my
                     journey.
                 </p>
                 <p className="mb-2">
@@ -44,21 +44,21 @@ const AboutMe = () => {
                     has 2 essential components: creativity and challenge.
                 </p>
 
-                <div className="text-xl mt-8">
+                <div className="text-xl mt-8 mb-8 border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
                     <a
                         href="/CV.pdf"
                         download="Elena Khlebnikova CV"
                         target="_blank"
-                        className="flex"
+                        className="flex justify-center items-center"
                     >
-                        <button>Download my CV</button>
+                        <span>Download my CV</span>
                         <animated.div style={props}>
                             <Image
-                                className="mt-24 mb-36 ml-5"
+                                className="ml-5"
                                 src="/social-documents.png"
                                 alt="document"
-                                width={100}
-                                height={100}
+                                width={50}
+                                height={50}
                             />
                         </animated.div>
                     </a>

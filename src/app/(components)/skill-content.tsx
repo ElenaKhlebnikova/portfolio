@@ -11,7 +11,7 @@ import {
     SiNextdotjs,
     SiTestinglibrary,
     SiTypescript,
-    SiNetlify,
+    SiVercel,
 } from 'react-icons/si'
 
 const SkillContent = ({
@@ -27,7 +27,7 @@ const SkillContent = ({
         | 'node'
         | 'rtl'
         | 'next'
-        | 'netlify'
+        | 'vercel'
 }) => {
     return (
         <div className="flex items-center justify-start lg:ml-10 ml-3">
@@ -82,9 +82,9 @@ const SkillContent = ({
                     RTL and MSW
                 </>
             )}
-            {content === 'netlify' && (
+            {content === 'vercel' && (
                 <>
-                    <SiNetlify className="w-14 h-16 mr-2" />
+                    <SiVercel className="w-14 h-16 mr-2" />
                     Netlify / Vercel
                 </>
             )}
