@@ -27,6 +27,7 @@ const SkillContent = ({
         | 'node'
         | 'rtl'
         | 'next'
+        | 'netlify'
 }) => {
     return (
         <div className="flex items-center justify-start lg:ml-10 ml-3">
