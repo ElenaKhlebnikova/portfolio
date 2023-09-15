@@ -15,7 +15,7 @@ interface Skill {
         | 'node'
         | 'rtl'
         | 'next'
-        | 'netlify'
+        | 'vercel'
 }
 
 const Skills = () => {
