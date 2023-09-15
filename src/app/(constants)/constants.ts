@@ -129,7 +129,7 @@ export const PROJECTS_DATA = [
             },
         ],
         description:
-            "This form is a part of an application I've collaborated on which allows users to rent out their kitchens. This form allows users to include a wide variety of information to their kitchen's listing such as: description, location, photos, host's languages, rules and availability (recurring and non-recurring).",
+            "This form is a part of an application I've collaborated on which allows users to rent out their kitchens. This form allows users to inзclude a wide variety of information to their kitchen's listing such as: description, location, photos, host's languages, rules and availability (recurring and non-recurring).",
         repo: 'https://github.com/ElenaKhlebnikova/kitchen-form',
         webLink: 'https://kitchen-form.vercel.app',
         features: [

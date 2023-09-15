@@ -7,7 +7,12 @@ import { FaJs } from '@react-icons/all-files/fa/FaJs'
 import { FaGit } from '@react-icons/all-files/fa/FaGit'
 import { FaNodeJs } from '@react-icons/all-files/fa/FaNodeJs'
 
-import { SiNextdotjs, SiTestinglibrary, SiTypescript } from 'react-icons/si'
+import {
+    SiNextdotjs,
+    SiTestinglibrary,
+    SiTypescript,
+    SiNetlify,
+} from 'react-icons/si'
 
 const SkillContent = ({
     content,
@@ -39,14 +44,12 @@ const SkillContent = ({
             )}
             {content === 'next' && (
                 <>
-                    <SiNextdotjs className="w-14 h-16 mr-2" /> Next.js v.13 (App
-                    router)
+                    <SiNextdotjs className="w-14 h-16 mr-2" /> Next.js v.13
                 </>
             )}
             {content === 'css' && (
                 <div className="flex items-center">
-                    <FaCss3 className="w-14 h-16 mr-1" /> / Tailwind / Styled
-                    components
+                    <FaCss3 className="w-14 h-16 mr-1" /> CSS / Tailwind
                 </div>
             )}
             {content === 'html' && (
@@ -63,7 +66,7 @@ const SkillContent = ({
             {content === 'js' && (
                 <>
                     <FaJs className="w-14 h-16 mr-2" />
-                    Java Script
+                    JavaScript
                 </>
             )}
             {content === 'git' && (
@@ -76,6 +79,12 @@ const SkillContent = ({
                 <>
                     <SiTestinglibrary className="w-14 h-16 mr-2" />
                     RTL and MSW
+                </>
+            )}
+            {content === 'netlify' && (
+                <>
+                    <SiNetlify className="w-14 h-16 mr-2" />
+                    Netlify / Vercel
                 </>
             )}
         </div>

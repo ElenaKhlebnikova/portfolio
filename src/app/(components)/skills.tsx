@@ -15,6 +15,7 @@ interface Skill {
         | 'node'
         | 'rtl'
         | 'next'
+        | 'netlify'
 }
 
 const Skills = () => {
@@ -24,41 +25,45 @@ const Skills = () => {
 
     const skills = [
         {
-            className: 'bg-emerald-400  h-16 pl-4 flex rounded-tl-md',
-            content: 'ts',
-        },
-        {
-            className: 'bg-teal-400 h-16 pl-4 flex',
-            content: 'react',
-        },
-        {
-            className: 'bg-cyan-400 h-16 pl-4',
+            className: 'bg-green-400  h-16 pl-4 flex rounded-tl-md',
             content: 'html',
         },
         {
-            className: 'bg-sky-400 h-16 pl-4',
+            className: 'bg-emerald-400 h-16 pl-4 flex',
             content: 'css',
         },
         {
-            className: 'bg-blue-400 h-16 pl-4',
+            className: 'bg-teal-400 h-16 pl-4',
             content: 'js',
         },
         {
-            className: 'bg-indigo-400 h-16 pl-4 ',
+            className: 'bg-cyan-400 h-16 pl-4',
+            content: 'react',
+        },
+        {
+            className: 'bg-sky-400 h-16 pl-4',
+            content: 'ts',
+        },
+        {
+            className: 'bg-blue-400 h-16 pl-4 ',
             content: 'git',
         },
         {
-            className: 'bg-violet-400 h-16 pl-4',
+            className: 'bg-indigo-400 h-16 pl-4',
+            content: 'rtl',
+        },
+        {
+            className: 'bg-violet-400  h-16 pl-4 flex items-center',
             content: 'node',
         },
         {
             className: 'bg-purple-400  h-16 pl-4 flex items-center',
-            content: 'rtl',
+            content: 'next',
         },
         {
             className:
                 'bg-fuchsia-400  h-16 pl-4 flex items-center rounded-bl-md',
-            content: 'next',
+            content: 'netlify',
         },
     ] as Skill[]
 
