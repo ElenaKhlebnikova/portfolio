@@ -36,8 +36,8 @@ const ProjectMore = ({
     const currentIndex = PROJECTS_DATA.indexOf(project)
 
     return (
-        <div>
-            <Link ref={ref} href="/">
+        <div ref={ref}>
+            <Link href="/">
                 <div className="text-fuchsia-500 mt-10 ml-5 flex lg:ml-20 justify-start items-center">
                     <FaHome />
                     <p className="ml-2">Home</p>
