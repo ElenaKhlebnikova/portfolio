@@ -24,7 +24,7 @@ const FooterLg = () => {
                         backgroundRepeat: 'no-repeat',
                     }}
                 >
-                    <Parallax translateX={['-300px', '300px']} speed={1}>
+                    <Parallax translateX={['-300px', '500px']} speed={1}>
                         <Image
                             className="mt-20 -z-10"
                             src="/flag.png"
@@ -34,7 +34,7 @@ const FooterLg = () => {
                         />
                     </Parallax>
                     <Parallax translateX={['-350px', '1600px']} speed={1}>
-                        <div className="flex flex-col ml-28 items-center  w-full text-xl">
+                        <div className="flex flex-col items-center xl:ml-72 w-full text-xl 2xl:ml-96">
                             <h3 className="flex justify-between items-center">
                                 Made with a lot of <FaHeart className="mx-1" />{' '}
                                 by Elena Khlebnikova

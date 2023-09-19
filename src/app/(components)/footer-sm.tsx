@@ -27,7 +27,7 @@ const FooterSm = () => {
                 >
                     <Parallax translateX={['-300px', '350px']} speed={1}>
                         <Image
-                            className="-z-10"
+                            className="-z-10 md:ml-36"
                             src="/flag.png"
                             alt="flag"
                             width={25}
