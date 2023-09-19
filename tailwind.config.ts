@@ -18,7 +18,7 @@ const config: Config = {
         },
         screens: {
             ...screens,
-            '3xl': '1500px',
+            '3xl': '1700px',
         },
     },
     plugins: [],
