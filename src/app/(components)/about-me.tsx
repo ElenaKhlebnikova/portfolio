@@ -46,7 +46,7 @@ const AboutMe = () => {
 
                 <div className="text-xl mt-8 mb-8 border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
                     <a
-                        href="/CV.pdf"
+                        href="/Elena_Khlebnikova_Frontend_Developer.pdf"
                         download="Elena Khlebnikova CV"
                         target="_blank"
                         className="flex justify-center items-center"
