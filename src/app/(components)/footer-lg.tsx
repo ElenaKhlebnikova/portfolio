@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const FooterLg = () => {
     return (
-        <div>
+        <div className="3xl:ml-48">
             <div
                 style={{
                     backgroundImage: `url('/stars.png')`,
@@ -34,7 +34,7 @@ const FooterLg = () => {
                         />
                     </Parallax>
                     <Parallax translateX={['-350px', '1600px']} speed={1}>
-                        <div className="flex flex-col items-center xl:ml-72 w-full text-xl 2xl:ml-96">
+                        <div className="flex flex-col items-center ml-56 xl:ml-72 w-full text-xl 2xl:ml-96">
                             <h3 className="flex justify-between items-center">
                                 Made with a lot of <FaHeart className="mx-1" />{' '}
                                 by Elena Khlebnikova

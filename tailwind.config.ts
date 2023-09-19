@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import { screens } from 'tailwindcss/defaultTheme'
 
 const config: Config = {
     content: [
@@ -14,6 +15,10 @@ const config: Config = {
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
+        },
+        screens: {
+            ...screens,
+            '3xl': '1500px',
         },
     },
     plugins: [],
