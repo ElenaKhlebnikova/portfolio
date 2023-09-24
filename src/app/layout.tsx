@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="font-primary">
-            <body className="text-white">{children}</body>
+            <body className="text-white">
+                <div className="max-w-screen-2xl mx-auto">{children}</div>
+            </body>
         </html>
     )
 }

@@ -41,7 +41,7 @@ const Projects = () => {
         >
             <h2 className="text-3xl ml-32 font-semibold mb-3">Projects</h2>
             {windowWidth >= 1024 ? (
-                <div className="flex relative min-h-screen">
+                <div className="flex relative 3xl:max-w-fit min-h-screen">
                     {PROJECTS_DATA.map((item, projectIndex) => {
                         return (
                             <div

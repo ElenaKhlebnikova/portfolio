@@ -44,7 +44,7 @@ const AboutMe = () => {
                     has 2 essential components: creativity and challenge.
                 </p>
 
-                <div className="text-xl mt-8 mb-8 border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
+                <div className="text-xl mt-8 mb-8 min-w-fit border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
                     <a
                         href="/Elena_Khlebnikova_Frontend_Developer.pdf"
                         download="Elena Khlebnikova CV"

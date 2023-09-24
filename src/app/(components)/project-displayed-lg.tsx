@@ -33,7 +33,7 @@ const ProjectDisplayedLg = ({
 
     const getTransformValues = () => {
         if (projectIndex === currentIndex) {
-            return 'translateX(10px)'
+            return 'translateX(0px)'
         } else if (projectIndex > currentIndex) {
             return 'translateX(200px)'
         } else if (projectIndex < currentIndex) {
@@ -48,23 +48,23 @@ const ProjectDisplayedLg = ({
     })
     if (!project) return null
     return (
-        <div className="flex flex-col min-h-fit max-h-fit">
-            <animated.div style={props} className="mb-10">
-                <div className="flex items-stretch relative justify-center w-screen h-80">
-                    <div className="flex items-stretch w-4/5">
+        <div className="flex flex-col min-h-fit max-h-fit 3xl:ml-96">
+            <animated.div style={props} className="mb-10 3xl:ml-96">
+                <div className="flex items-stretch relative justify-center w-screen 3xl:h-96">
+                    <div className="flex flex-nowrap items-stretch 3xl:justify-end w-3/4 3xl:ml-96">
                         {currentIndex === projectIndex && (
                             <button
                                 type="button"
                                 onClick={() => handleClick(-1)}
-                                className="text-3xl mx-3"
+                                className="text-3xl mx-3 mb-3 3xl:translate-x-72"
                             >
                                 <FaArrowLeft />
                             </button>
                         )}
 
-                        <div className="flex justify-between items-start">
+                        <div className="flex justify-between items-start 3xl:justify-end">
                             <div
-                                className="flex flex-col w-1/2  h-full px-5 xl:py-10 py-5"
+                                className="flex flex-col w-1/2  h-full px-5 xl:py-10 py-5 3xl:w-1/4"
                                 style={{
                                     backgroundColor: 'rgb(36, 36, 36)',
                                 }}
