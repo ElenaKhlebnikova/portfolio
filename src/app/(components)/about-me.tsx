@@ -39,7 +39,7 @@ const AboutMe = () => {
                     journey.
                 </p> */}
                 <p className="mb-2">
-                I'm a full-stack developer specializing  in  Node.js and TypeScript, with expertise in MySQL, PostgreSQL on the backend and React and Next.js  on the frontend. I ensure APIs are performant and follow best practices, always considering trade-offs in API design. I have a good understanding of the underlying infrastructure like Linux, Docker, and setting up CI/CD pipelines with GitHub Actions.
+                I&apos;m a full-stack developer specializing  in  Node.js and TypeScript, with expertise in MySQL, PostgreSQL on the backend and React and Next.js  on the frontend. I ensure APIs are performant and follow best practices, always considering trade-offs in API design. I have a good understanding of the underlying infrastructure like Linux, Docker, and setting up CI/CD pipelines with GitHub Actions.
 
                 </p>
 
