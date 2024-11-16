@@ -7,11 +7,21 @@ import { FaJs } from '@react-icons/all-files/fa/FaJs'
 import { FaGit } from '@react-icons/all-files/fa/FaGit'
 import { FaNodeJs } from '@react-icons/all-files/fa/FaNodeJs'
 
+
+
 import {
     SiNextdotjs,
     SiTestinglibrary,
     SiTypescript,
     SiVercel,
+    SiMysql,
+    SiPostgresql,
+    SiDocker,
+    SiGithubactions,
+    SiPostman,
+    SiLinux,
+    SiSocketdotio
+  
 } from 'react-icons/si'
 
 const SkillContent = ({
@@ -20,6 +30,15 @@ const SkillContent = ({
     content:
         | 'ts'
         | 'react'
+        | 'mysql'
+        | 'postgresql'
+        | 'docker'
+| 'rest'
+| 'githubactions'
+| 'postman'
+| 'ssh'
+| 'linux'
+| 'socket'
         | 'html'
         | 'css'
         | 'js'
@@ -50,7 +69,35 @@ const SkillContent = ({
             )}
             {content === 'css' && (
                 <div className="flex items-center">
-                    <FaCss3 className="w-14 h-16 mr-1" /> CSS / Tailwind
+                    <FaCss3 className="w-14 h-16 mr-1" /> CSS3 / Tailwind
+                </div>
+            )}
+                 {content === 'mysql' && (
+                <div className="flex items-center">
+                    <SiMysql className="w-14 h-16 mr-1" /> MySQL
+                </div>
+            )}
+                 {content === 'postgresql' && (
+                <div className="flex items-center">
+                    <SiPostgresql className="w-14 h-16 mr-1" /> PostgreSQL
+                </div>
+            )}
+
+{content === 'githubactions' && (
+                <div className="flex items-center">
+                    <SiGithubactions className="w-14 h-16 mr-1" /> Github Actions
+                </div>
+            )}
+
+{content === 'postman' && (
+                <div className="flex items-center">
+                    <SiPostman className="w-14 h-16 mr-1" /> Postman
+                </div>
+            )}
+
+{content === 'rest' && (
+                <div className="flex items-center">
+                    REST API
                 </div>
             )}
             {content === 'html' && (
@@ -70,10 +117,35 @@ const SkillContent = ({
                     JavaScript
                 </>
             )}
+             {content === 'docker' && (
+                <>
+                    <SiDocker className="w-14 h-16 mr-2" />
+                    Docker
+                </>
+            )}
             {content === 'git' && (
                 <>
                     <FaGit className="w-14 h-16 mr-2" />
                     Git / GitHub
+                </>
+            )}
+                {content === 'socket' && (
+                <>
+                    <SiSocketdotio className="w-14 h-16 mr-2" />
+                   Socket.io
+                </>
+            )}
+                 {content === 'ssh' && (
+                <>
+                 
+                 SSH
+                </>
+            )}
+
+{content === 'linux' && (
+                <>
+                    <SiLinux className="w-14 h-16 mr-2" />
+                  Linux
                 </>
             )}
             {content === 'rtl' && (

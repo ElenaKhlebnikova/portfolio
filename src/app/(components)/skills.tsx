@@ -7,7 +7,13 @@ interface Skill {
     className: string
     content:
         | 'ts'
+        | 'docker'
+        | 'githubactions'
         | 'react'
+| 'postman'
+| 'ssh'
+| 'linux'
+| 'socket'
         | 'html'
         | 'css'
         | 'js'
@@ -24,48 +30,98 @@ const Skills = () => {
     const [ref, inView] = useInView()
 
     const skills = [
+
+
         {
-            className: 'bg-green-400  h-16 pl-4 flex rounded-tl-md',
+            className: 'bg-violet-500/90 h-16 pl-4 flex rounded-tl-md',
             content: 'html',
         },
         {
-            className: 'bg-emerald-400 h-16 pl-4 flex',
+            className: 'bg-violet-500/80  h-16 pl-4 flex',
             content: 'css',
         },
         {
-            className: 'bg-teal-400 h-16 pl-4',
+            className: 'bg-violet-500/80 h-16 pl-4',
             content: 'js',
         },
         {
-            className: 'bg-cyan-400 h-16 pl-4',
-            content: 'react',
-        },
-        {
-            className: 'bg-sky-400 h-16 pl-4',
+            className: 'bg-violet-500/75 h-16 pl-4',
             content: 'ts',
         },
         {
-            className: 'bg-blue-400 h-16 pl-4 ',
-            content: 'git',
-        },
-        {
-            className: 'bg-indigo-400 h-16 pl-4',
-            content: 'rtl',
-        },
-        {
-            className: 'bg-violet-400  h-16 pl-4 flex items-center',
+            className: 'bg-violet-500/70  h-16 pl-4 flex items-center',
             content: 'node',
         },
+
         {
-            className: 'bg-purple-400  h-16 pl-4 flex items-center',
+            className: 'bg-violet-500/60  h-16 pl-4 flex items-center',
+            content: 'mysql',
+        },
+        {
+            className: 'bg-violet-500/60  h-16 pl-4 flex items-center',
+            content: 'postgresql',
+        },
+        {
+            className: 'bg-violet-500/50  h-16 pl-4 flex items-center',
+            content: 'docker',
+        },
+        {
+            className: 'bg-violet-500/50 h-16 pl-4 flex items-center',
+            content: 'githubactions',
+        },
+        {
+            className: 'bg-violet-500/40 h-16 pl-4 ',
+            content: 'git',
+  
+        },
+
+        {
+            className: 'bg-violet-500/40  h-16 pl-4 flex items-center',
+            content: 'postman',
+        },
+      
+        {
+            className: 'bg-violet-500/30  h-16 pl-4 flex items-center',
+            content: 'linux',
+        },
+        {
+            className: 'bg-violet-500/30 h-16 pl-4',
+            content: 'react',
+        },
+        {
+            className: 'bg-violet-500/25  h-16 pl-4 flex items-center',
             content: 'next',
         },
+         
+        {
+            className: 'bg-violet-500/20 h-16 pl-4',
+            content: 'rtl',
+        },
+          
         {
             className:
-                'bg-fuchsia-400  h-16 pl-4 flex items-center rounded-bl-md',
+                'bg-violet-500/10  h-16 pl-4 flex items-center',
             content: 'vercel',
         },
+          
+        {
+            className:
+                'bg-violet-500/10  h-16 pl-4 flex items-center ',
+            content: 'socket',
+        },
+        {
+            className: 'bg-violet-500/5 h-16 pl-4 flex items-center',
+            content: 'rest',
+        },
+        {
+            className: 'bg-violet-500/5  h-16 pl-4 flex items-center rounded-bl-md',
+            content: 'ssh',
+        },
+     
+    
     ] as Skill[]
+
+
 
     const trail = useTrail(skills.length, {
         config,

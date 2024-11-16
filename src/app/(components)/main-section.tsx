@@ -22,7 +22,7 @@ const MainSection = () => {
                 <Parallax
                     translateY={[
                         `${-scrollHeight}px`,
-                        `${scrollHeight + 1000}px`,
+                        `${scrollHeight + 3000}px`,
                     ]}
                     speed={0.5}
                 >
@@ -36,7 +36,7 @@ const MainSection = () => {
                 </Parallax>
                 <Parallax translateX={['120px', '-300px']} speed={1}>
                     <Image
-                        className="mt-44 -z-10"
+                        className="mt-72 -z-10"
                         src="/social-planet.png"
                         alt="planet-earth"
                         width={150}
@@ -55,7 +55,7 @@ const MainSection = () => {
                     />
                 </Parallax>
                 <p className="lg:text-6xl  font-semibold">
-                    Hi! I am a frontend developer.
+                    Hi! I am a fullstack developer.
                 </p>
             </div>
         </div>

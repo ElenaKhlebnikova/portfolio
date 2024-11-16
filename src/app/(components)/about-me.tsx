@@ -25,10 +25,10 @@ const AboutMe = () => {
             <div className="md:w-1/2 md:mx-10 mx-2 flex flex-col md:text-xl leading-7 font-mono px-5 py-5 bg-black rounded-md bg-opacity-50 mb-3">
                 <h2 className="md:text-3xl text-2xl font-semibold">About me</h2>
                 <p className="mb-2">
-                    Hi! My name is Elena and I am a frontend developer based in
+                    Hi! My name is Elena and I am a fullstack developer based in
                     Berlin.
                 </p>
-                <p className="mb-2">
+                {/* <p className="mb-2">
                     Before discovering frontend I got a bachelor&apos;s degree
                     in Teaching and Languages (German and English) and had been
                     working as a teacher and a private tutor for around 6 years.
@@ -37,16 +37,15 @@ const AboutMe = () => {
                     and, most importantly, I&apos;ve learnt how to teach and how
                     to learn, and it is something that I apply everyday on my
                     journey.
-                </p>
+                </p> */}
                 <p className="mb-2">
-                    Even though being a teacher is a very important role, I
-                    realized that my heart leans towards web-development as it
-                    has 2 essential components: creativity and challenge.
+                I'm a full-stack developer specializing  in  Node.js and TypeScript, with expertise in MySQL, PostgreSQL on the backend and React and Next.js  on the frontend. I ensure APIs are performant and follow best practices, always considering trade-offs in API design. I have a good understanding of the underlying infrastructure like Linux, Docker, and setting up CI/CD pipelines with GitHub Actions.
+
                 </p>
 
                 <div className="text-xl mt-8 mb-8 min-w-fit border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
                     <a
-                        href="/Elena_Khlebnikova_Frontend_Developer.pdf"
+                        href="/CV.pdf"
                         download="Elena Khlebnikova CV"
                         target="_blank"
                         className="flex justify-center items-center"

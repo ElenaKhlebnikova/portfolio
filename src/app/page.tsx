@@ -5,7 +5,7 @@ import Footer from './(components)/footer'
 import Skills from './(components)/skills'
 
 import AboutMe from './(components)/about-me'
-import Projects from './(components)/projects'
+import Experience from './(components)/experience'
 
 const Home = () => {
     return (
@@ -14,7 +14,8 @@ const Home = () => {
                 <MainSection />
                 <AboutMe />
                 <Skills />
-                <Projects />
+                {/* <Projects /> */}
+                <Experience />
                 <Footer />
             </ParallaxProvider>
         </div>
