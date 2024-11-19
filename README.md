@@ -1,6 +1,6 @@
 # 💼Portfolio
 
-Welcome to Portfolio repository! This is my portfolio website which showcases projects I have worked on.
+Welcome to Portfolio repository! This is my portfolio website which showcases my experience.
 
 
 
@@ -22,17 +22,7 @@ This portfolio is built with the following tech stack:
 
 ## 👀 Project Overview
 
-Click  [here](https://portfolio-elenakhlebnikova.vercel.app/) to view the project.
-
-
-![Portfolio main](https://i.ibb.co/Yfw3k4Q/image.png)
-
-![Porlfolio skills](https://i.ibb.co/bB9HWJv/image.png)
-![Projects](https://i.ibb.co/VCD0GW5/image.png)
-![Project page](https://i.ibb.co/GWD3Zv9/image.png)
-![Footer](https://i.ibb.co/X42gN2X/image.png)
-
-
+Click  [here](https://www.elenadev.me/) to view the project.
 
 
 
