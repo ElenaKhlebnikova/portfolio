@@ -348,3 +348,5 @@ import { TProject } from '../(types)'
 //         ],
 //     },
 // ] as TProject[]
+
+export const PROJECTS_DATA = [] as TProject[]
