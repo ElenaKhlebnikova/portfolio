@@ -25,16 +25,33 @@ const Experience = () => {
 
 I worked as a full-stack developer focusing mainly on backend and building resilient APIs however I also contributed on the frontend by building pixel-perfect responsive web apps according to our Figma designs. Below are some of the major projects I worked on:
 <ul>
-    <li className="my-10 leading-relaxed"><strong>Rapple Analytics:</strong> It is a centralized dashboard for different ad campaigns created from different sources to allow the customer to analyze the conversion rate of different campaigns. 
-The challenge was integrating Yandex API as it does not provide full access to its campaigns so came up with a solution which involved import/export of the data and a beautifully designed cronjob to overcome this limitation.
+    <li className="my-10 leading-relaxed"><strong>Rapple Analytics:</strong> 
+    
+    It is a centralized dashboard for different ad campaigns created from different sources to allow the customer to analyze the conversion rate of different campaigns. 
+
+
+    <ul className="mt-4 list-disc ml-10">
+        <li>    Designed a solution to overcome Yandex API’s limitation (some campaigns could not be fetched from regular REST endpoint) to ensure full data integration.</li>
+
+<li>Implemented import/export mechanism in a cronjob to automate the continuous data integration between Yandex API and our application.</li>
+
+    </ul>
 </li>
-<li className="my-10 leading-relaxed"><strong>Learning Platform:</strong> It is a fully fledged learning platform which includes ability to manage courses and their sections. Each section can contain different types of tasks such as video, texts and graded tests. In addition, the ability to keep track of students real-time progress throughout the course.
-Because of a tight deadline, I worked closely with the frontend developer to ensure timely delivery of features to the client.
+<li className="my-10 leading-relaxed"><strong>Learning Platform:</strong> 
+<ul className="mt-4 list-disc ml-10">
+<li>Developed a fully-fledged learning platform, which includes different types of tasks such as video, texts and graded tests along with the ability for the client to manage the content of the courses.</li>
+<li>Enabled real-time progress tracking throughout the course.</li>
+<li>Collaborated closely with the frontend developer to ensure timely delivery of features to the client.</li>
+</ul>
 </li>
 
-<li className="my-10 leading-relaxed"><strong> GK Maximum: </strong>  It is a large cosmetic store built on top of a legacy vendor with a custom SQL database, our agency was contracted to modernize their architecture by first migrating the database to a standard MySQL one and also revamp their frontend and mobile application.
-The complexity lies within the data migration. Given that database is a legacy one, I had to connect to their server hosting the database via FTP, download the data in CSV format and finally import it into our own database.
-Because of a tight deadline, I worked closely with the frontend developer to ensure timely delivery of features to the client.
+<li className="my-10 leading-relaxed"><strong> GK Maximum: </strong> It is a large cosmetic store built on top of a legacy vendor with a custom
+SQL database, our agency was contracted to modernize their architecture by first migrating the
+database to a standard MySQL one and also revamp their frontend and mobile application.
+
+<ul className="mt-4 list-disc ml-10"><li>Engineered a migration solution of the client’s legacy database, which involves
+connecting to client’s FTP server to access the data, converting it from CSV and
+importing into our own MySQL database while ensuring data integrity.</li></ul>
 </li>
 </ul>
 

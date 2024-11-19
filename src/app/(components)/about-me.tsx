@@ -28,24 +28,15 @@ const AboutMe = () => {
                     Hi! My name is Elena and I am a fullstack developer based in
                     Berlin.
                 </p>
-                {/* <p className="mb-2">
-                    Before discovering frontend I got a bachelor&apos;s degree
-                    in Teaching and Languages (German and English) and had been
-                    working as a teacher and a private tutor for around 6 years.
-                    This experience helped me to get a range of valuable skills:
-                    working in a team, solving conflicts, working under stress
-                    and, most importantly, I&apos;ve learnt how to teach and how
-                    to learn, and it is something that I apply everyday on my
-                    journey.
-                </p> */}
+          
                 <p className="mb-2">
-                I&apos;m a full-stack developer specializing  in  Node.js and TypeScript, with expertise in MySQL, PostgreSQL on the backend and React and Next.js  on the frontend. I ensure APIs are performant and follow best practices, always considering trade-offs in API design. I have a good understanding of the underlying infrastructure like Linux, Docker, and setting up CI/CD pipelines with GitHub Actions.
+                I specialize in  Node.js and TypeScript, with expertise in MySQL, PostgreSQL on the backend and React and Next.js  on the frontend. I ensure APIs are performant and follow best practices, always considering trade-offs in API design. I have a good understanding of the underlying infrastructure like Linux, Docker, and setting up CI/CD pipelines with GitHub Actions.
 
                 </p>
 
                 <div className="text-xl mt-8 mb-8 min-w-fit border px-2 py-1 rounded-md md:w-1/2 md:self-end ">
                     <a
-                        href="/CV.pdf"
+                        href="/Khlebnikova Elena - Full-stack developer CV.pdf"
                         download="Elena Khlebnikova CV"
                         target="_blank"
                         className="flex justify-center items-center"
